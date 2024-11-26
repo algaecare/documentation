@@ -29,7 +29,7 @@ export default {
   },
   footer: {
     content: null,
-    components: <></>,
+    components: null,
   },
   faviconGlyph: "🌱",
   themeSwitch: {
