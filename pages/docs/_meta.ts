@@ -4,4 +4,5 @@ export default {
   hardware: "Hardware",
   software: "Software",
   testing: "Testing",
+  glossary: "Glossar",
 };
