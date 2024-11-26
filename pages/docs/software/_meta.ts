@@ -1,4 +1,5 @@
 export default {
+  systemidee: "Systemidee",
   kontextabgrenzung: "Kontextabgrenzung",
   loesungsstrategie: "Lösungsstrategie",
   bausteineinsicht: "Bausteineinsicht",
