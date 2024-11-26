@@ -1,4 +1,0 @@
-= Testplan
-
-// https://de.parasoft.com/blog/how-to-write-test-cases-for-software-examples-tutorial/
-// Beschreiben Sie hier, wann Sie was testen wollen.
