@@ -1,0 +1,30 @@
+# Bausteinsicht
+
+## Inhalt
+Die Bausteinsicht zeigt die statische Zerlegung des Systems in Bausteine (Module, Komponenten, Subsysteme, Klassen, Schnittstellen, Pakete, Bibliotheken, Frameworks, Schichten, Partitionen, Tiers, Funktionen, Makros, Operationen, Datenstrukturen, ...) sowie deren Abhängigkeiten (Beziehungen, Assoziationen, ...)
+
+
+Diese Sicht sollte in jeder Architekturdokumentation vorhanden sein.
+In der Analogie zum Hausbau bildet die Bausteinsicht den _Grundrissplan_.
+
+## Motivation
+Behalten Sie den Überblick über den Quellcode, indem Sie die statische Struktur des Systems durch Abstraktion verständlich machen.
+
+Damit ermöglichen Sie Kommunikation auf abstrakterer Ebene, ohne zu viele Implementierungsdetails offenlegen zu müssen.
+
+## Form
+Die Bausteinsicht ist eine hierarchische Sammlung von Blackboxen und Whiteboxen (siehe Abbildung unten) und deren Beschreibungen.
+
+![09_bausteineinsicht_beispiel](/assets/docs/software/bausteineinsicht.png)
+
+1. *Ebene 1* ist die Whitebox-Beschreibung des Gesamtsystems, zusammen mit Blackbox-Beschreibungen der darin enthaltenen Bausteine.
+
+2. *Ebene 2* zoomt in einige Bausteine der Ebene 1 hinein.
+Sie enthält somit die Whitebox-Beschreibungen ausgewählter Bausteine der Ebene 1, jeweils zusammen mit Blackbox-Beschreibungen darin enthaltener Bausteine.
+
+3. *Ebene 3* zoomt in einige Bausteine der Ebene 2 hinein, usw.
+
+
+## Weiterführende Informationen
+
+Siehe https://docs.arc42.org/section-5/[Bausteinsicht] in der online-Dokumentation (auf Englisch!).

@@ -1,8 +1,7 @@
 export default {
-  introduction: {
-    title: "Einführung",
-  },
-  Hardware: "",
-  Software: "",
-  Testing: "",
+  einfuehrung: "Einführung",
+  allgemeines: "Allgemeines",
+  hardware: "Hardware",
+  software: "Software",
+  testing: "Testing",
 };
