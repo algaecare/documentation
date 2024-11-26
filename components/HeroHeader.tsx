@@ -1,11 +1,11 @@
 import React from "react";
-import { useThemeConfig } from "nextra-theme-docs";
+// bg-customColor dark:bg-customColor-dark text-customColor dark:text-customColor-dark"
 
 export const HeroHeader = () => {
   return (
-    <div className="grid gap-8 px-6 py-10 mx-auto lg:grid-cols-2 lg:px-8 lg:py-40">
+    <div className="grid gap-8 py-10 mx-auto lg:grid-cols-2 lg:py-40">
       <div className="max-w-2xl">
-        <span className="inline-block rounded-full bg-lime-600/10 px-3 py-1 text-sm font-semibold text-lime-600 ring-1 ring-inset ring-lime-600/10">
+        <span className="inline-block rounded-full bg-customColor/10 dark:bg-customColor-dark/10 px-3 py-1 text-sm font-semibold text-customColor dark:text-customColor-dark ring-1 ring-inset ring-customColor/10">
           Elaboration Phase
         </span>
 
@@ -17,10 +17,10 @@ export const HeroHeader = () => {
           Algae Care is a platform that helps you to grow your algae knowledge.
         </p>
 
-        <div className="mt-10 flex gap-6">
+        <div className="mt-10 flex gap-6 items-center">
           <a
             href="/docs/introduction"
-            className="rounded-md bg-lime-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-lime-500"
+            className="rounded-md bg-customColor dark:bg-customColor-dark py-2.5 text-sm font-semibold text-white dark:text-black hover:bg-customColor/75 hover:dark:bg-customColor-dark/75"
           >
             Documentation
           </a>

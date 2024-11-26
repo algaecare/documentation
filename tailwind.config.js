@@ -8,7 +8,21 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx,md,mdx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        customColor: {
+          DEFAULT: 'hsl(141, 59%, 40%)', // Light mode
+          dark: 'hsl(141, 59%, 80%)', // Dark mode
+        },
+      },
+    },
   },
-  plugins: []
-}
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      textColor: ['dark'],
+    },
+  },
+  plugins: [],
+  darkMode: 'class', // Enable dark mode support
+};
