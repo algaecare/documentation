@@ -11,8 +11,8 @@ module.exports = {
     extend: {
       colors: {
         customColor: {
-          DEFAULT: 'hsl(141, 59%, 40%)', // Light mode
-          dark: 'hsl(141, 59%, 80%)', // Dark mode
+          DEFAULT: 'hsl(181, 99%, 23%)', // Light mode
+          dark: 'hsl(181, 99%, 35%)', // Dark mode
         },
       },
     },

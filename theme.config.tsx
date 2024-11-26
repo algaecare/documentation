@@ -55,11 +55,11 @@ export default {
     </div>
   ),
   color: {
-    hue: 141,
-    saturation: 59,
+    hue: 181,
+    saturation: 99,
     lightness: {
-      dark: 80,
-      light: 40,
+      dark: 40,
+      light: 45,
     },
   },
   search: {
