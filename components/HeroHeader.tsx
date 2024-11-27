@@ -19,7 +19,7 @@ export const HeroHeader = () => {
 
         <div className="mt-10 flex gap-6 items-center">
           <a
-            href="/docs/introduction"
+            href="/docs/einfuehrung"
             className="rounded-md bg-customColor dark:bg-customColor-dark py-2.5 px-3 text-sm font-semibold text-white dark:text-black hover:bg-customColor/75 hover:dark:bg-customColor-dark/75"
           >
             Documentation
