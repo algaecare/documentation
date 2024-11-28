@@ -6,5 +6,6 @@ export default {
     usabilitytests: "4.0 Usability-Tests",
     abschliessendesystemtests: "5.0 Abschliessende Systemtests",
     case_00_template: "Case Template",
+    usabilitytests_template: "Usability-Tests Template",
   };
   
