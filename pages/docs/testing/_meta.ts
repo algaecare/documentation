@@ -1,5 +1,5 @@
 export default {
-    Testplan: "Testplan",
+    testplan: "Testplan",
     smoketests: "1.0 Smoke Tests",
     funktionstests: "2.0 Funktionstests",
     integrationstests: "3.0 Integrationstests",
