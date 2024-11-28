@@ -4,7 +4,7 @@ export default {
     funktionstests: "2.0 Funktionstests",
     integrationstests: "3.0 Integrationstests",
     usabilitytests: "4.0 Usability-Tests",
-    abschliessendesystemtests: "5.0 Abschliessende Systemtests",
+    abschliessendesystemtests: "5.0 Abschliessende Performance-/Systemtests",
     case_00_template: "Case Template",
     usabilitytests_template: "Usability-Tests Template",
   };
