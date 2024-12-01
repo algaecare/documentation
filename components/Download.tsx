@@ -251,7 +251,7 @@ const Download: React.FC<{
         </button>
       </div>
       <div className={`${className} flex items-center space-x-2`}>
-        {loading === "docx" ? (
+        {loading === "doc" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -278,7 +278,7 @@ const Download: React.FC<{
             await downloadFile("doc");
           }}
         >
-          {loading === "docx" ? loadingText : "Exportieren als DOC (Word)"}
+          {loading === "doc" ? loadingText : "Exportieren als DOC (Word)"}
         </button>
       </div>
       <div className={`${className} flex items-center space-x-2`}>
