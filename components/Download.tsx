@@ -155,9 +155,9 @@ const Download: React.FC<{
   className?: string;
   filePath?: string;
 }> = ({ children, className }) => {
-  const [loading, setLoading] = React.useState<"pdf" | "html" | "doc" | null>(
-    null
-  );
+  const [loading, setLoading] = React.useState<
+    "pdf" | "html" | "doc" | "mdx" | "adoc" | null
+  >(null);
   const loadingText = "Datei wird exportiert...";
 
   async function downloadFile(type: "pdf" | "html" | "doc" | "mdx" | "adoc") {
