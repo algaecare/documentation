@@ -48,4 +48,8 @@ export default {
       };
     },
   },
+  toc: {
+    title: "Auf dieser Seite",
+    backToTop: "Zurück nach oben",
+  },
 } as DocsThemeConfig;
