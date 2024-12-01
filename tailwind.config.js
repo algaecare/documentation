@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         customColor: {
           DEFAULT: 'hsl(181, 99%, 23%)', // Light mode
