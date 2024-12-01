@@ -1,5 +1,4 @@
 import React from "react";
-// bg-customColor dark:bg-customColor-dark text-customColor dark:text-customColor-dark"
 
 export const HeroHeader = () => {
   return (
