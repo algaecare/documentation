@@ -6,7 +6,7 @@ const Logo: React.FC<{
   filePath?: string;
 }> = ({ children, className }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 text-lg">
       <svg
         width="24" // Reduced from 185
         height="24" // Reduced from 191, maintaining roughly same aspect ratio

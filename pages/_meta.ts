@@ -10,4 +10,12 @@ export default {
     title: "Dokumentation",
     type: "page",
   },
+  testing: {
+    title: "Testing",
+    type: "page",
+  },
+  template: {
+    title: "Vorlage (arc42)",
+    type: "page",
+  },
 };
