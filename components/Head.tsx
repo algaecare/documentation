@@ -26,6 +26,11 @@ const Head: React.FC<{
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet"
       ></link>
+      <script
+        defer
+        data-domain="docu-541dc1.pages.fhnw.ch"
+        src="https://plausible.tbuser.dev/js/script.file-downloads.hash.outbound-links.js"
+      ></script>
     </>
   );
 };
