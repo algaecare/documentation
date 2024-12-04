@@ -1,23 +1,28 @@
-# Nextra Docs Template 
+# Willkommen bei der Algea Care Dokumentation
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+Diese Dokumentation enthält Informationen zu den Funktionen und Einstellungen von Algea Care.
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+[**Zur Website →**](https://docu-541dc1.pages.fhnw.ch/)
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+## Entwicklung
 
-## Quick Start
+Die Dokumentationswebsite ist unter [docu-541dc1.pages.fhnw.ch](https://docu-541dc1.pages.fhnw.ch/) erreichbar.
 
-Click the button to clone this repository and deploy it on Vercel:
+Die Dokumentation wird mit [Nextra](https://nextra.site) erstellt.
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+Um die Dokumentation lokal zu entwickeln, folgenden Schritte ausführen:
 
-## Local Development
+1. `Node.js` und `pnpm` installieren
+2. `pnpm i` ausführen, um die Abhängigkeiten zu installieren
+3. `pnpm run dev` ausführen, um den Entwicklungsserver zu starten
+4. `localhost:3000` im Browser öffnen
 
-First, run `pnpm i` to install the dependencies.
+Die Seiten in der Dokumentation sind in Markdown geschrieben und befinden sich im `pages`-Ordner.
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+### Spezialfall: Entwicklung mit React Components
 
-## License
+_Dieser Abschnitt ist noch in Bearbeitung..._
 
-This project is licensed under the MIT License.
+## Deployment
+
+Die Dokumentation wird automatisch bei einem Push auf den `master`-Branch auf [GitHub Pages](https://pages.github.com/) deployt. Dieser Vorgang ist im `.gitlab-ci.yml`-File definiert.
