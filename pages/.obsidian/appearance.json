@@ -1,5 +1,7 @@
 {
   "cssTheme": "Minimal",
   "accentColor": "",
-  "translucency": false
+  "translucency": false,
+  "interfaceFontFamily": "",
+  "textFontFamily": ""
 }
