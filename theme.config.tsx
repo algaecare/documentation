@@ -17,11 +17,11 @@ export default {
   },
   logo: Logo,
   color: {
-    hue: 181,
-    saturation: 99,
+    hue: 175,
+    saturation: 49,
     lightness: {
-      dark: 40,
-      light: 45,
+      dark: 45,
+      light: 40,
     },
   },
   search: {
