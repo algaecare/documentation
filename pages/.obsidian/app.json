@@ -1,7 +1,7 @@
 {
   "livePreview": true,
-  "strictLineBreaks": true,
-  "propertiesInDocument": "hidden",
+  "strictLineBreaks": false,
+  "propertiesInDocument": "visible",
   "foldHeading": true,
   "showLineNumber": false,
   "spellcheck": false,

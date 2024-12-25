@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "testing/funktionstests/case_02_01.mdx",
-                "mode": "source",
+                "file": "testing/testplan.mdx",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "case_02_01"
+              "title": "testplan"
             }
           }
         ]
@@ -93,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "testing/testplan.mdx",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for testplan"
             }
           },
           {
@@ -111,11 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "testing/testplan.mdx",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from testplan"
             }
           },
           {
@@ -123,9 +125,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "testing/testplan.mdx"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of testplan"
             }
           },
           {
@@ -161,6 +165,7 @@
   },
   "active": "604fa883a0b4d7db",
   "lastOpenFiles": [
+    "testing/funktionstests/case_02_01.mdx",
     "testing/testplan.mdx",
     "testing/funktionstests/case_02_09.mdx",
     "testing/funktionstests/case_02_08.mdx",
@@ -170,7 +175,6 @@
     "testing/funktionstests/case_02_04.mdx",
     "testing/funktionstests/case_02_03.mdx",
     "testing/funktionstests/case_02_02.mdx",
-    "testing/funktionstests/case_02_01.mdx",
     "template/software/bausteineinsicht/ebene-1.mdx"
   ]
 }
