@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.5
+    "width": 279.5,
+    "collapsed": true
   },
   "right": {
     "id": "f6829fd04035ebef",
@@ -159,7 +160,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "28e298920a36b9eb",
+  "active": "604fa883a0b4d7db",
   "lastOpenFiles": [
     "Untitled.md",
     "newnote.mdx.md",
