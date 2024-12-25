@@ -1,0 +1,11 @@
+{
+  "livePreview": true,
+  "strictLineBreaks": true,
+  "propertiesInDocument": "hidden",
+  "foldHeading": true,
+  "showLineNumber": false,
+  "spellcheck": false,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "showInlineTitle": false
+}
