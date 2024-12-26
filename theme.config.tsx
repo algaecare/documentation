@@ -21,8 +21,12 @@ export default {
     saturation: 49,
     lightness: {
       dark: 45,
-      light: 40,
+      light: 45,
     },
+  },
+  backgroundColor: {
+    dark: "000,000,000",
+    light: "255,255,255",
   },
   search: {
     placeholder: "Seite durchsuchen...",
