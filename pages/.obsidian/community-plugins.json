@@ -1,5 +1,6 @@
 [
-  "mdx-as-md-obsidian",
   "obsidian-minimal-settings",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "edit-mdx",
+  "obsidian-git"
 ]

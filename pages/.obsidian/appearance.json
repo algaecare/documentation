@@ -3,5 +3,6 @@
   "accentColor": "",
   "translucency": false,
   "interfaceFontFamily": "",
-  "textFontFamily": ""
+  "textFontFamily": "",
+  "theme": "obsidian"
 }
