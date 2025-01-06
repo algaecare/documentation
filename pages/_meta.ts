@@ -7,7 +7,7 @@ export default {
       layout: "full",
     },
   },
-  docs: {
+  sad: {
     title: "SAD",
     type: "page",
   },
