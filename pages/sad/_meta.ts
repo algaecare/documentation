@@ -20,5 +20,10 @@ export default {
     type: "separator",
     title: "Glossar",
   },
-  glossar: "Glossar",
+  begriffe: "Begriffe",
+  "---4": {
+    type: "separator",
+    title: "Andere",
+  },
+  anforderungen: "Anforderungen",
 };
