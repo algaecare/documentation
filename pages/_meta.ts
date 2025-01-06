@@ -7,6 +7,10 @@ export default {
       layout: "full",
     },
   },
+  docu: {
+    title: "Docu",
+    type: "page",
+  },
   sad: {
     title: "SAD",
     type: "page",
