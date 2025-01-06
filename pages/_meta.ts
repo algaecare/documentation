@@ -8,7 +8,7 @@ export default {
     },
   },
   docs: {
-    title: "Dokumentation",
+    title: "SAD",
     type: "page",
   },
   testing: {
