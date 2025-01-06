@@ -36,8 +36,7 @@ export default {
     component: null,
   },
   footer: {
-    content: null,
-    components: null,
+    component: null,
   },
   editLink: {
     component: Download,
