@@ -51,4 +51,41 @@ Durch den Einsatz des RFID-Readers wird sichergestellt, dass die Eingaben der Be
 
 ## Technischer- oder Verteilungskontext
 
-// TODO: Describe technical context
+### Übersicht
+
+Der technische Kontext von Algae Care beschreibt die Interaktion des Systems mit seinen Hauptkomponenten und deren Umgebung. Das System basiert auf einer modularen Architektur, die die Verarbeitung von Eingaben, die Simulation von Umweltreaktionen und die Visualisierung der Ergebnisse umfasst. Es wurde entwickelt, um sowohl robust als auch flexibel zu sein und kann unabhängig von externen Systemen betrieben werden.
+
+### Hauptkomponenten und deren Rollen
+1. **Raspberry Pi (zentrale Recheneinheit):**
+- Verantwortlich für die Verarbeitung der RFID-Eingaben, die Durchführung der Simulationen und die Steuerung der visuellen Ausgaben.
+- Betriebssystem: Raspberry Pi OS.
+- Java 21 wird als Hauptprogrammiersprache verwendet, unterstützt durch die Pi4J-Bibliothek zur Hardwarekommunikation.
+2. **RFID-Reader:**	
+- Eingabegerät zur Identifikation der 3D-gedruckten Alltagsobjekte, basierend auf RFID-Tags.
+- Verbindung über USB oder GPIO-Pins.
+- Daten werden direkt an die zentrale Anwendung weitergeleitet.
+3. **Monitor (Visualisierung):**
+- Dient als Anzeige für die Simulationsergebnisse und Benutzeraktionen.
+- Verbindung über HDMI, gesteuert durch die Java-Anwendung.
+4. **3D-Druckobjekte mit RFID-Tags:**
+- Physische Objekte, die vom Benutzer als Eingabe verwendet werden.
+- Tags enthalten eindeutige Identifikationsdaten, die vom RFID-Reader gelesen werden.
+
+### Datenfluss und Interaktion
+- **Eingabe:** Benutzer platzieren ein 3D-Objekt in den vorgesehenen Bereich. Der RFID-Reader erfasst die Tag-Daten und übermittelt sie an die Anwendung.
+- **Verarbeitung:** Die Anwendung interpretiert die Daten und simuliert die Auswirkungen der Eingabe auf das Ökosystem.
+- **Ausgabe: **Die Ergebnisse der Simulation werden in Echtzeit auf dem Monitor visualisiert, einschließlich positiver oder negativer Auswirkungen auf die Algenpopulation.
+
+### Externe Abhängigkeiten
+- **Hardware-Kompatibilität:**	
+    - Sicherstellung der Funktionalität mit Raspberry Pi 5 und Pi4J-Bibliothek. Bei Bedarf kann ein Mikrocontroller (z. B. Arduino) als Vermittler eingesetzt werden.
+**Offline-Fähigkeit:**
+- Das System benötigt keine Internetverbindung und ist vollständig autark.
+
+### Technische Herausforderungen und Lösungen
+- **Störungsfreiheit:** Durch die Verwendung von LF-RFID-Tags wird sichergestellt, dass benachbarte Tags nicht versehentlich ausgelesen werden.
+- **Flexibilität:** Konfigurierbare Parameter (z. B. Sprache und Simulationseinstellungen) ermöglichen einfache Anpassungen über eine zentrale Konfigurationsdatei.
+
+### Fazit
+
+Der technische Kontext von Algae Care kombiniert robuste Hardware mit effizienter Software, um eine interaktive und benutzerfreundliche Erfahrung zu schaffen. Die Architektur gewährleistet, dass das System unabhängig von externen Ressourcen arbeitet, flexibel erweitert werden kann und gleichzeitig den spezifischen Anforderungen einer Ausstellung gerecht wird.
