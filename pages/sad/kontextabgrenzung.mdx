@@ -1,0 +1,54 @@
+# Kontextabgrenzung
+
+In diesem Abschnitt wird das Umfeld von Algae Care beschrieben, um die Rolle des Exponats innerhalb der Ausstellung und seine Interaktion mit der Umgebung klar zu definieren. Der Fokus liegt darauf, die Zielgruppe des Systems zu identifizieren und die Schnittstellen zu externen Systemen oder Komponenten zu beschreiben.
+
+Die Kontextabgrenzung ermöglicht es, das Projekt besser einzuordnen, indem sie die Grenzen des Systems sowie seine Abhängigkeiten und Wechselwirkungen mit anderen Systemen oder Elementen aufzeigt. Dadurch wird sichergestellt, dass alle Beteiligten ein gemeinsames Verständnis über den Anwendungsbereich und die technischen Rahmenbedingungen des Exponats teilen.
+
+Dieser Abschnitt beantwortet folgende Fragen:
+- Für welche Benutzerinnen und Benutzer ist Algae Care vorgesehen?
+- Mit welchen externen Systemen oder Komponenten interagiert das Exponat?
+- Welche Rolle spielt das Exponat im Gesamtkontext der Ausstellung?
+
+Die präzise Abgrenzung des Kontexts ist entscheidend, um die Anforderungen an das System zu definieren und dessen erfolgreiche Integration in die Ausstellung zu gewährleisten.
+
+## Fachlicher Kontext
+
+```mermaid
+graph TD
+    A[Algae Care] -->|Interagiert mit| B[Schülerinnen und Schüler]
+    A -->|Erkennt Eingaben| C[RFID-Reader]
+    C -->|Liest RFID-Tags aus| D[3D-Druckmodelle]
+    D -->|Repräsentieren Umweltfaktoren| E[Alltagsobjekte]
+    A -->|Visualisiert Feedback| F[Monitor]
+    F -->|Zeigt Auswirkungen in Echtzeit| G[Simuliertes Ökosystem]
+    G -->|Fördert Bewusstsein| B
+```
+
+### Benutzer (Schülerinnen und Schüler)
+
+Algae Care richtet sich primär an Jugendliche der 7. bis 9. Schulklasse, die das Exponat interaktiv erleben. Die Benutzer interagieren mit dem System durch haptische Eingaben wie das Platzieren von Alltagsobjekten (z. B. Plastikflaschen oder Kompost) und beobachten die Auswirkungen dieser Handlungen auf ein simuliertes Ökosystem. Diese Interaktion dient nicht nur der Wissensvermittlung, sondern soll auch das Bewusstsein für Nachhaltigkeit und Umweltschutz fördern.
+
+### 3D-Druckmodelle (Fremdsystem)
+
+Für die haptische Interaktion werden physische Alltagsobjekte wie Plastikflaschen oder Abfallstücke verwendet, die mithilfe von 3D-Druck erstellt werden. Diese Objekte repräsentieren verschiedene Umweltfaktoren und ermöglichen den Nutzern, durch einfache Handlungen komplexe ökologische Zusammenhänge zu verstehen. Der 3D-Druck und die Verarbeitung der Modelle erfolgen außerhalb des Systems, ihre Integration ist jedoch entscheidend für das Benutzererlebnis.
+
+### Visualisierungssystem (Fremdsystem)
+
+Das Feedback zu den Benutzeraktionen wird über einen angeschlossenen Monitor dargestellt. Dieses Visualisierungssystem zeigt in Echtzeit, wie die Algen auf die Eingaben der Benutzer reagieren, und veranschaulicht, ob diese Eingaben einen positiven oder negativen Einfluss auf das Ökosystem haben. Der Monitor verzichtet bewusst auf Touchscreen-Funktionen, da diese für die angestrebte Interaktion nicht erforderlich sind. Stattdessen liegt der Fokus auf der klaren und anschaulichen Darstellung der Auswirkungen.
+
+### RFID-Reader (Fremdsystem)
+
+Der RFID-Reader wird eingesetzt, um die 3D-gedruckten Alltagsobjekte zuverlässig zu erkennen und die Benutzerinteraktionen mit dem Exponat zu ermöglichen. Jedes Objekt ist mit einem RFID-Tag ausgestattet, das vom Reader ausgelesen wird, sobald das Objekt in das dafür vorgesehene Eingabefeld platziert wird.
+
+Der RFID-Reader dient dabei als zentrale Schnittstelle zur Erkennung und Zuordnung der Objekte. Auf Basis der erkannten Objekte bewertet das System deren Auswirkungen auf das simulierte Ökosystem und stellt die Ergebnisse visuell auf dem Monitor dar.
+
+Die Nutzung eines RFID-Readers bietet folgende Vorteile:
+- **Robuste Erkennung:** Jedes Objekt wird eindeutig identifiziert, wodurch Fehleingaben minimiert werden.
+- **Kontaktlose Bedienung:** Die Interaktion ist einfach und intuitiv, ohne dass mechanische Teile oder Sensoren verschleißen.
+- **Flexibilität:** Neue Objekte können durch Hinzufügen passender RFID-Tags leicht in das System integriert werden.
+
+Durch den Einsatz des RFID-Readers wird sichergestellt, dass die Eingaben der Benutzer präzise erkannt und korrekt verarbeitet werden, was das Nutzererlebnis verbessert und die Interaktion mit dem Exponat erleichtert.
+
+## Technischer- oder Verteilungskontext
+
+// TODO: Describe technical context
