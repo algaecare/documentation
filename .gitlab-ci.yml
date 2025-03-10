@@ -6,8 +6,8 @@ stages:
 pages:
   stage: build
   script:
-    - npm install
-    - npm run build
+    - pnpm install
+    - pnpm run build
   artifacts:
     paths:
       - out
