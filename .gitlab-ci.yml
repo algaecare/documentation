@@ -6,6 +6,7 @@ stages:
 pages:
   stage: build
   script:
+    - npm install -g pnpm
     - pnpm install
     - pnpm run build
   artifacts:
