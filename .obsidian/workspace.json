@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fe30ce2717213740",
+        "id": "1f39b6f5b33e90af",
         "type": "tabs",
         "children": [
           {
-            "id": "a56580fb8a89ff8d",
+            "id": "05d13ebd18f2c885",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -36,7 +36,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -132,7 +133,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a56580fb8a89ff8d",
+  "active": "05d13ebd18f2c885",
   "lastOpenFiles": [
     "README.md",
     "template/allgemeines/aufgabenstellung.mdx",

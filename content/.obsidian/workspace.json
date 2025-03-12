@@ -11,10 +11,14 @@
             "id": "a56580fb8a89ff8d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "sad/anforderungen.mdx",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "anforderungen"
             }
           }
         ]
@@ -36,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -132,22 +137,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a56580fb8a89ff8d",
+  "active": "28e298920a36b9eb",
   "lastOpenFiles": [
+    "docu/hardware/smb.mdx",
+    "docu/hardware/index.mdx",
+    "docu/hardware/hardware.mdx",
+    "docu/hardware.mdx",
+    "docu/hardware/wlan.mdx",
+    "docu/hardware/meta.ts",
+    "docu/hardware",
+    "sad/anforderungen.mdx",
+    "Untitled.md",
+    "docu/einfuehrung.mdx",
     "README.md",
     "template/allgemeines/aufgabenstellung.mdx",
     "index.mdx",
-    "testing/testplan.mdx",
-    "testing/usabilitytests_template.mdx",
-    "Untitled.md",
-    "Untitled.mdx",
     "Test.md",
-    "testing/case_00_template.mdx",
     "newnote.mdx.md",
-    "testing/new_note.md",
-    "testing/new_note.mdx",
-    "testing/funktionstests/case_02_01.mdx",
-    "testing/funktionstests/case_02_09.mdx",
-    "testing/funktionstests/case_02_08.mdx"
+    "testing/new_note.md"
   ]
 }

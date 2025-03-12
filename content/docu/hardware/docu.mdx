@@ -1,0 +1,65 @@
+import { Callout } from 'nextra/components'
+
+# Documentation-Server
+
+Dieser Abschnitt beschreibt die Konfiguration des Dokumentationsservers des Raspberry Pi.
+
+<Callout type="info" emoji="🌐️">
+    Sobald ein Client mit dem WLAN-Netzwerk des Raspberry Pi verbunden ist, kann die Dokumentation über die IP-Adresse des Raspberry Pi erreicht werden:
+    - `http://192.168.1.1`
+    - `http://host.algeacare`
+</Callout>
+
+## 1. Software installieren
+
+Als erstes müssen die benötigten Software-Pakete installiert werden.
+
+```bash
+sudo apt install nginx -y
+```
+
+Dies installiert die folgenden Pakete:
+- `nginx`: Webserver-Software
+
+## 2. Dokumentationsverzeichnis einrichten
+
+Anschliessend wird das Verzeichnis für die Dokumentation eingerichtet. Das Verzeichnis wird von der SMB-Freigabe verwendet, um die Dokumentation bereitzustellen. Somit muss ein symbolischer Link der beiden Verzeichnisse erstellt werden, sowie die Berechtigungen angepasst werden.
+
+```bash
+sudo ln -s /home/pi/algeacare/docs /var/www/algeacare
+```
+
+```bash
+sudo chmod +x /home/pi
+sudo chmod -R 755 /home/pi/algeacare
+sudo chmod -R 755 /home/pi/algeacare/docs
+sudo chown -R www-data:www-data /home/pi/algeacare/docs
+```
+
+## 3. Nginx-Konfiguration
+
+Zum Schluss wird die Nginx-Konfiguration angepasst, um die Dokumentation bereitzustellen.
+
+```bash
+sudo nano /etc/nginx/sites-available/default
+```
+
+```nginx
+server {
+    listen 80;
+    server_name _;
+
+    root /var/www/algeacare;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
+Dieser Schritt definiert, dass der Webserver auf Port 80 lauscht und die Dokumentation im Verzeichnis `/var/www/algeacare` bereitstellt. Somit ist die Dokumentation über die IP-Adresse des Raspberry Pi erreichbar.
+
+```bash
+sudo systemctl restart nginx
+```
