@@ -50,23 +50,23 @@ sudo service nmbd restart
 Dieser Abschnitt beschreibt, wie ein Verzeichnis für die Freigabe über Samba eingerichtet wird.
 
 ```bash
-sudo mkdir /home/pi/algeacare
+sudo mkdir /home/pi/algaecare
 ```
 
 Ein Verzeichnis wird erstellt, das für die Freigabe über Samba vorgesehen ist.
 
 ```bash
 # Berechtigungen für root
-sudo chown root:root /home/pi/algeacare
-sudo chmod 777 /home/pi/algeacare
+sudo chown root:root /home/pi/algaecare
+sudo chmod 777 /home/pi/algaecare
 
 # Berechtigungen für users
-sudo chown root:users /home/pi/algeacare
-sudo chmod 770 /home/pi/algeacare
+sudo chown root:users /home/pi/algaecare
+sudo chmod 770 /home/pi/algaecare
 
 # Berechtigungen für pi
-sudo chown pi:pi /home/pi/algeacare
-sudo chmod 700 /home/pi/algeacare
+sudo chown pi:pi /home/pi/algaecare
+sudo chmod 700 /home/pi/algaecare
 ```
 
 Berechtigungen für das Verzeichnis werden gesetzt.
@@ -76,9 +76,9 @@ sudo nano /etc/samba/smb.conf
 ```
 
 ```ini
-[AlgeaCare]
-comment = AlgeaCare-Freigabe
-path = /home/pi/algeacare
+[AlgaeCare]
+comment = AlgaeCare-Freigabe
+path = /home/pi/algaecare
 read only = no
 ```
 
