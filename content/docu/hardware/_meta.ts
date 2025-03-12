@@ -2,4 +2,5 @@
 export default {
     wlan: 'WLAN-Access-Point',
     smb: 'SMB-Server',
+    docu: 'Dokumentation-Server',
 }
