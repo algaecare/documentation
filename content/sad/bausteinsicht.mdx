@@ -47,13 +47,11 @@ graph TD
             GameState
         end
         subgraph view
-            subgraph gui
-                AnimationScreen
-                GameScreen
-                IdleScreen
-                ScreenController
-                Window
-            end
+            AnimationScreen
+            GameScreen
+            IdleScreen
+            ScreenController
+            Window
         end
         AppStarter
     end
@@ -101,113 +99,8 @@ graph TD
 
 ### Interconnections Between Components
 
-```plantuml
-@startuml
-skinparam linetype polyline
-skinparam linetype ortho
+<img src="/classOnlyInheretence.png" width="auto" height="auto"  alt={"error loading image"}/>
 
-class com.algaecare.view.Window {
-+ <<Create>> Window(Stage)
-}
+### Interconnections Between Components including usages
 
-class com.algaecare.view.IdleScreen {
-+ <<Create>> IdleScreen(String)
-}
-
-class com.algaecare.view.AnimationScreen {
-+ <<Create>> AnimationScreen(String,Consumer<Void>)
-+ void restart()
-+ void dispose()
-}
-
-enum com.algaecare.model.GameState {
-+  TITLE
-+  OPENING
-+  GAMEPLAY
-+  CUTSCENE
-+  ENDING
-}
-
-abstract class com.algaecare.view.Screen {
-+ void dispose()
-}
-
-interface com.algaecare.controller.GameStateChangeListener {
-}
-class com.algaecare.controller.ScreenController {
-+ <<Create>> ScreenController(MainController,Stage)
-+ void onGameStateChanged(GameState,GameState)
-}
-
-class com.algaecare.model.Environment {
-+ <<Create>> Environment(int,int,int,int)
-+ void updateEnvironment(EnvironmentObject)
-+ int getCo2Level()
-+ int getTemperature()
-+ int getAlgaeLevel()
-+ int getO2Level()
-+ List<EnvironmentObject> initializeEnvironmentObjects()
-+ List<EnvironmentObject> getEnvironmentObjects()
-}
-
-interface com.algaecare.controller.NFCChipListener {
-}
-class com.algaecare.view.GameScreen {
-+ <<Create>> GameScreen(String)
-+ void updateEnvironmentDisplay(Environment)
-}
-
-class com.algaecare.app.Main {
-+ {static} void main(String[])
-+ void start(Stage)
-}
-
-class com.algaecare.model.EnvironmentObject {
-+ <<Create>> EnvironmentObject(String,int,int,int,int)
-+ String getName()
-+ int getCo2Change()
-+ int getTemperatureChange()
-+ int getAlgaeChange()
-+ int getOxygenChange()
-}
-
-class com.algaecare.controller.NFCChipController {
-+ <<Create>> NFCChipController()
-+ byte[] getDataOfChip()
-+ boolean setDataOfChip(byte[])
-+ int getIntFromChip()
-+ boolean setIntOnChip(int)
-+ void addListener(NFCChipListener)
-+ void removeListener(NFCChipListener)
-}
-
-class com.algaecare.controller.KeyboardInputController {
-+ <<Create>> KeyboardInputController(Stage)
-+ void bindKey(KeyCode,Consumer<KeyEvent>)
-+ void unbindKey(KeyCode)
-+ void clearBindings()
-+ void dispose()
-}
-
-class com.algaecare.controller.MainController {
-+ <<Create>> MainController(Stage)
-+ Environment getEnvironment()
-+ GameState getGameState()
-+ void setGameState(GameState)
-+ void addGameStateChangeListener(GameStateChangeListener)
-+ void removeGameStateChangeListener(GameStateChangeListener)
-+ void onNewTagDetected(int)
-}
-
-
-
-javafx.scene.layout.VBox <|-- com.algaecare.view.Window
-com.algaecare.view.Screen <|-- com.algaecare.view.IdleScreen
-com.algaecare.view.Screen <|-- com.algaecare.view.AnimationScreen
-javafx.scene.layout.VBox <|-- com.algaecare.view.Screen
-com.algaecare.controller.GameStateChangeListener <|.. com.algaecare.controller.ScreenController
-com.algaecare.view.Screen <|-- com.algaecare.view.GameScreen
-javafx.application.Application <|-- com.algaecare.app.Main
-com.algaecare.controller.NFCChipListener <|.. com.algaecare.controller.MainController
-@enduml
-```
+<img src="/class.png" width="auto" height="auto"  alt={"error loading image"}/>
