@@ -17,15 +17,12 @@ graph TD
         Controller
         Model
         View
-        Service
     end
 
     AppStarter --> Controller
-    Controller --> Model
+    Model --> Controller
     Controller --> View
-    Controller --> Service
-    Model --> Service
-    View --> Service
+    View --> Controller
 ```
 
 ## Eingabe- und Verarbeitungssystems (Ebene 2)
@@ -35,98 +32,34 @@ graph TD
 ```mermaid
 graph TD
     subgraph AlgaeCare
+        subgraph app
+            Main
+        end
         subgraph controller
-            ApplicationController
-            MainModel
+            KeyboardInputController
+            MainController
+            NFCChipController
+            ScreenController
         end
         subgraph model
-            StaticImage
-            AnimatedObject
-        end
-        subgraph service
-            ImageManipulationService
-            LocalizationService
+            Environment
+            EnvironmentObject
+            GameState
         end
         subgraph view
-            subgraph gui
-                MainGui
-                ChatBubblePanel
-            end
-            subgraph pui
-                MainPui
-            end
+            AnimationScreen
+            GameScreen
+            IdleScreen
+            ScreenController
+            Window
         end
         AppStarter
     end
-
-    AppStarter --> ApplicationController
-    ApplicationController --> MainModel
-    MainGui --> ApplicationController
-    MainPui --> ApplicationController
-    StaticImage --> ImageManipulationService
-    AnimatedObject --> StaticImage
-    ChatBubblePanel --> StaticImage
-    MainGui --> LocalizationService
-    MainGui --> StaticImage
-    MainGui --> AnimatedObject
-    MainGui --> ChatBubblePanel
-    MainPui --> MainModel
-    MainPui --> ApplicationController
 ```
 
 ### Core MVC Framework Components
 
-```mermaid
-graph TD
-    subgraph ch
-        subgraph mvcbase
-            ControllerBase
-            GuiBase
-            Projector
-            PuiBase
-            GameControllerBase
-            ComponentGuiBase
-            MixedGuiBase
-            GameGuiBase
-            ConcurrentTaskQueue
-            MvcLogger
-        end
-    end
-
-    ApplicationController --> ControllerBase
-    MainGui --> GuiBase
-    MainPui --> PuiBase
-    GuiBase --> Projector
-    PuiBase --> Projector
-    GameControllerBase --> ControllerBase
-    ComponentGuiBase --> GuiBase
-    MixedGuiBase --> GuiBase
-    GameGuiBase --> GuiBase
-    ConcurrentTaskQueue --> ControllerBase
-    MvcLogger --> ControllerBase
-```
-
-### GUI Widgets
-
-```mermaid
-graph TD
-    subgraph ch
-        subgraph trick17
-            subgraph gui
-                subgraph widget
-                    Widget
-                    Label
-                    Button
-                    TextField
-                end
-            end
-        end
-    end
-
-    Label --> Widget
-    Button --> Widget
-    TextField --> Widget
-```
+TODO
 
 ### Pi4J Hardware Components
 
@@ -166,19 +99,8 @@ graph TD
 
 ### Interconnections Between Components
 
-```mermaid
-graph TD
-    AppStarter --> ApplicationController
-    ApplicationController --> MainModel
-    MainGui --> ApplicationController
-    MainPui --> ApplicationController
-    StaticImage --> ImageManipulationService
-    AnimatedObject --> StaticImage
-    ChatBubblePanel --> StaticImage
-    MainGui --> LocalizationService
-    MainGui --> StaticImage
-    MainGui --> AnimatedObject
-    MainGui --> ChatBubblePanel
-    MainPui --> MainModel
-    MainPui --> ApplicationController
-```
+<img src="/classOnlyinheretence.png" width="auto" height="auto"  alt={"error loading image"}/>
+
+### Interconnections Between Components including usages
+
+<img src="/class.png" width="auto" height="auto"  alt={"error loading image"}/>
