@@ -1,6 +1,6 @@
-# Willkommen bei der Algea Care Dokumentation
+# Willkommen bei der Algae Care Dokumentation
 
-Diese Dokumentation enthält Informationen zu den Funktionen und Einstellungen von Algea Care.
+Diese Dokumentation enthält Informationen zu den Funktionen und Einstellungen von Algae Care.
 
 [**Zur Website →**](https://docu-541dc1.pages.fhnw.ch/)
 

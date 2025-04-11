@@ -64,13 +64,13 @@ dhcp-range=192.168.1.100,192.168.1.200,255.255.255.0,24h
 dhcp-option=option:dns-server,192.168.1.1
 
 # Domain
-domain=algeacare
-address=/host.algeacare/192.168.1.1
+domain=algaecare
+address=/host.algaecare/192.168.1.1
 ```
 
 Der DHCP-Server ist somit aktiviert und weist neuen Clients im Adressbereich `192.168.1.100-200` dynamische IP-Adressen zu. Nach `24 Stunden` wird die IP-Adresse wieder freigegeben.
 
-Zudem wird der DNS-Server auf die IP-Adresse `192.168.1.1` gesetzt und die Domain `algeacare` definiert. Die Domain `host.algeacare` wird auf die IP-Adresse `192.168.1.1` gemappt, somit ist der Raspberry Pi unter `host.algeacare` erreichbar.
+Zudem wird der DNS-Server auf die IP-Adresse `192.168.1.1` gesetzt und die Domain `algaecare` definiert. Die Domain `host.algaecare` wird auf die IP-Adresse `192.168.1.1` gemappt, somit ist der Raspberry Pi unter `host.algaecare` erreichbar.
 
 ```bash
 dnsmasq --test -C /etc/dnsmasq.conf
@@ -100,7 +100,7 @@ interface=wlan0
 #driver=nl80211
 
 # WLAN-Konfiguration
-ssid=algeacare
+ssid=algaecare
 channel=1
 hw_mode=g
 ieee80211n=1
@@ -116,7 +116,7 @@ rsn_pairwise=CCMP
 wpa_passphrase=ip12FHNW2025!
 ```
 
-In dieser Konfiguration wird das WLAN-Interface `wlan0` als Access-Point konfiguriert. Der Access-Point wird mit dem Namen `algeacare` betrieben und verwendet den WLAN-Kanal `1` mit dem Frequenzband `2.4 GHz` (`2.4 GHz` Kanäle sind in der Schweiz von `1-13` verfügbar).
+In dieser Konfiguration wird das WLAN-Interface `wlan0` als Access-Point konfiguriert. Der Access-Point wird mit dem Namen `algaecare` betrieben und verwendet den WLAN-Kanal `1` mit dem Frequenzband `2.4 GHz` (`2.4 GHz` Kanäle sind in der Schweiz von `1-13` verfügbar).
 
 Zur Verschlüsselung wird `WPA2` verwendet und das Passwort `ip12FHNW2025!` definiert.
 
