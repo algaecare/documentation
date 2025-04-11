@@ -12,7 +12,7 @@ export default {
     title: "Architektur",
   },
   kontextabgrenzung: "Kontextabgrenzung",
-  bausteinsicht: "Bausteinsicht",
+  bausteinansicht: "Bausteinansicht",
   laufzeitsicht: "Laufzeitsicht",
   verteilungssicht: "Verteilungssicht",
   entwurfsentscheidungen: "Entwurfsentscheidungen",

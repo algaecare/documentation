@@ -12,54 +12,35 @@ Diese Darstellung dient dazu, die Modularität und die klare Trennung der Verant
 
 ```mermaid
 graph TD
-    subgraph AlgaeCare
-        AppStarter
-        Controller
-        Model
-        View
+subgraph AlgaeCare
+        subgraph App
+            AppStarter
+            Controller
+            Model
+            View
+        end
+        subgraph Hardware
+            NFC-Input
+            Display
+        end
+        User
     end
 
-    AppStarter --> Controller
-    Model --> Controller
-    Controller --> View
-    View --> Controller
-```
+AppStarter -->|initializes| Controller
+Controller -->|uses| Model
+Controller -->|changes| View
 
-## Eingabe- und Verarbeitungssystems (Ebene 2)
+NFC-Input -->|sends event| Controller
+Controller -->|changes| Display
+
+
+User -->|interacts with| NFC-Input
+Display -->|reacts to| User
+```
 
 ### Main Application Components
 
-```mermaid
-graph TD
-    subgraph AlgaeCare
-        subgraph app
-            Main
-        end
-        subgraph controller
-            KeyboardInputController
-            MainController
-            NFCChipController
-            ScreenController
-        end
-        subgraph model
-            Environment
-            EnvironmentObject
-            GameState
-        end
-        subgraph view
-            AnimationScreen
-            GameScreen
-            IdleScreen
-            ScreenController
-            Window
-        end
-        AppStarter
-    end
-```
-
-### Core MVC Framework Components
-
-TODO
+<img src="/classSimple.png" width="auto" height="auto"  alt={"error loading image"}/>
 
 ### Pi4J Hardware Components
 
