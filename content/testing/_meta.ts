@@ -5,7 +5,7 @@ export default {
     integrationstests: "3.0 Integrationstests",
     usabilitytests: "4.0 Usability-Tests",
     performancetests: "5.0 Performance-Tests",
-    hardweartests: "6.0 Hardwear-Tests",
+    hardwaretests: "6.0 Hardware-Tests",
     case_00_template: "Case Template",
     usabilitytests_template: "Usability-Tests Template",
   };
