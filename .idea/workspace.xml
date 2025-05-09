@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5b527c7-2a63-4eef-a3d9-b0db380ddec4" name="Changes" comment="add gitlab pipeline">
+    <list default="true" id="a5b527c7-2a63-4eef-a3d9-b0db380ddec4" name="Changes" comment="Korrektur Test cases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/sad/qualitätsziele.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/sad/qualitätsziele.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "Shell Script.start.executor": "Run",
-    "git-widget-placeholder": "hextra-migration",
+    "git-widget-placeholder": "main",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "junie.onboarding.icon.badge.shown": "true",
@@ -203,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746789493005</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Korrektur Test cases">
+      <option name="closed" value="true" />
+      <created>1746793797218</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746793797218</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +242,8 @@
     <MESSAGE value="add SSH" />
     <MESSAGE value="hextra migration init" />
     <MESSAGE value="add gitlab pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitlab pipeline" />
+    <MESSAGE value="Erstellung des Hardwaretest Segment" />
+    <MESSAGE value="Korrektur Test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Korrektur Test cases" />
   </component>
 </project>
