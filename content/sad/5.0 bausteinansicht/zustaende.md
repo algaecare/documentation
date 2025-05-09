@@ -1,5 +1,5 @@
 ---
-title: Schntitstellen
+title: Zustände
 type: docs
 ---
 In dieser Seite werden alle "States" (Zustände) beschrieben welches die Applikation haben kann.

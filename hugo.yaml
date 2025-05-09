@@ -27,6 +27,9 @@ menu:
   - name: Testing
     pageRef: /testing
     weight: 2
+  - name: Wartung
+    pageRef: /wartung
+    weight: 3
   - name: Search
     weight: 4
     params:

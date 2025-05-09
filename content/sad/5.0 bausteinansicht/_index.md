@@ -1,6 +1,7 @@
 ---
-title: Bausteinsicht
+title: 5.0 Bausteinsicht
 type: docs
+weight: 5
 ---
 (hier genügt eine einfache Darstellung auf Ebene Pakete und Klassen)
 
