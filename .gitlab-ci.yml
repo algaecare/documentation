@@ -1,4 +1,4 @@
-image: klakegg/hugo:latest
+image: hugomods/hugo:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -8,11 +8,26 @@ cache:
   - public
   - resources
 
-pages:
+stages:
+- build
+- deploy
+
+build_site:
+  stage: build
   script:
   - hugo --minify
   artifacts:
     paths:
     - public
+
+pages:
+  stage: deploy
+  script:
+  - echo "Publishing to GitLab Pages..."
+  artifacts:
+    paths:
+    - public
   rules:
   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  dependencies:
+  - build_site
