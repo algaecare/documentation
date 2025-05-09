@@ -1,5 +1,6 @@
 ---
 title: Software Architecture Documentation
+type: docs
 ---
 
 Einführung

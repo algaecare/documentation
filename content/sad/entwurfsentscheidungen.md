@@ -1,0 +1,63 @@
+---
+title: Entwurfssentscheidungen
+type: docs
+---
+In diesem Abschnitt werden zwei besonders interessante Entscheidungen beleuchtet, die beim Entwurf von Algae Care getroffen wurden. Diese Entscheidungen waren entscheidend für die Architektur, Funktionalität und Benutzererfahrung des Systems und spiegeln die Abwägungen zwischen verschiedenen Anforderungen und technischen Möglichkeiten wider.
+
+Ziel dieses Abschnitts ist es, die Hintergründe und Beweggründe hinter den Entwurfsentscheidungen transparent zu machen. Dadurch soll ein besseres Verständnis für die Architektur des Systems vermittelt werden, sowie die Auswirkungen dieser Entscheidungen auf die Funktionalität, Wartbarkeit und Erweiterbarkeit von Algae Care.
+
+## Entscheidung 1: Wie erkennt Algae Care Alltagsobjekte mittels RFID-Technologie?
+
+### Zur Fragestellung
+
+Eine zentrale Anforderung an Algae Care ist die zuverlässige und präzise Erkennung der 3D-gedruckten Alltagsobjekte, die als Eingabemedium dienen. Wie erfolgt die Identifikation dieser Objekte?
+
+Die Erkennung basiert auf der Verwendung von RFID-Tags, die an den Objekten befestigt werden, sowie einem RFID-Reader, der diese Tags ausliest. Es stehen verschiedene Frequenzbereiche (LF und HF) sowie mehrere Reader- und Tag-Optionen zur Auswahl. Jede dieser Optionen hat spezifische Vor- und Nachteile, die die Robustheit, Benutzerfreundlichkeit und Anpassungsfähigkeit des Systems beeinflussen.
+
+### Relevante Einflussfaktoren
+
+#### Randbedingungen
+
+- Betrieb auf Raspberry Pi mit Pi4J-Bibliothek.
+- Minimierung von Interferenzen durch benachbarte RFID-Tags.
+- Robustheit gegenüber äußeren Einflüssen (z. B. Material des Gehäuses oder Umgebung).
+
+#### Maßgeblich betroffene Qualitätsmerkmale
+
+- Zuverlässigkeit: Störungsfreies Auslesen der Tags, auch bei hoher Nutzung.
+- Benutzerfreundlichkeit: Sofortige und präzise Erkennung der eingegebenen Objekte.
+- Flexibilität: Möglichkeit, neue Objekte und Tags einfach hinzuzufügen.
+
+#### Betroffene Risiken
+
+- Interferenzen durch Tags, die in der Nähe gelagert werden.
+- Lesefehler durch Materialdämpfung (z. B. durch Gehäusematerial oder Mehrschichtaufbau).
+- Kompatibilitätsprobleme zwischen Readern und Raspberry Pi 5.
+
+#### Betrachtete Alternativen
+
+1. **Frequenzbereiche:**
+- LF (Low Frequency):
+    - Weniger störanfällig durch geringere Reichweite.
+    - Höhere Robustheit bei nah beieinander gelagerten Tags.
+- HF (High Frequency):
+    - Einfachere Verfügbarkeit der Hardware.
+    - Kompatibilität mit bestehenden Technologien wie Smartphones.
+2. **RFID-Reader:**
+- Option 1: RC522 (HF): Günstig und kompatibel mit HF-Tags.
+- Option 2: ACR122U (HF): Unterstützt das Schreiben und Lesen von Tags, bietet jedoch eingeschränkte Kompatibilität mit Raspberry Pi 5.
+3. **RFID-Tags:**
+- LF-Tags (z. B. Jetons): Robuster und weniger anfällig für Störungen, jedoch teurer und schwerer erhältlich.
+- HF-Tags (z. B. Klebetags): Einfach zu montieren, kostengünstig und kompatibel mit RC522, aber potenziell störanfälliger.
+
+#### Entscheidung
+
+Nach Abwägung der Qualitätsziele und Risiken wurde entschieden:
+
+- RFID-Frequenz: LF (Low Frequency) wird verwendet, um Störungen durch benachbarte Tags zu minimieren und eine höhere Zuverlässigkeit im Ausstellungskontext zu gewährleisten.
+- Reader: Ein LF-Reader, der mit Pi4J kompatibel ist, wird integriert. Falls es Kompatibilitätsprobleme gibt, kann ein Mikrocontroller (z. B. Arduino) zwischengeschaltet werden.
+- Tags: Robuste LF-Tags (Jetons) werden bevorzugt, da sie besser für den langfristigen Einsatz und die wiederholte Nutzung geeignet sind.
+
+#### Begründung
+
+Die Entscheidung für LF und robuste Tags gewährleistet die Zuverlässigkeit des Systems und minimiert potenzielle Interferenzen. Der Leseradius ist optimal, um eine eindeutige Identifizierung der eingegebenen Objekte zu ermöglichen, ohne dass andere Tags versehentlich ausgelesen werden. Darüber hinaus ist das System skalierbar und kann bei Bedarf durch zusätzliche Tags oder neue Hardware erweitert werden.

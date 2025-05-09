@@ -3,5 +3,37 @@ title: A
 type: docs
 ---
 
-A simple demo page.
+---
+asIndexPage: true
+---
+
+import { Cards } from 'nextra/components'
+
+# Hardware
+
+Dieser Abschnitt beschreibt die Hardware-Konfiguration des Raspberry Pi.
+
+
+
+## Utilities
+<Cards>
+    <Cards.Card
+        title="WLAN-Access-Point"
+        href="/docu/hardware/wlan"
+    />
+    <Cards.Card
+        title="SMB-Server"
+        href="/docu/hardware/smb"
+    />
+    <Cards.Card
+        title="Documentation"
+        href="/docs/built-ins/steps"
+    />
+</Cards>
+
+## Applikation
+
+
+## Externe Anbindung
+
 

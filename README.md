@@ -74,7 +74,7 @@ hugo server --logLevel debug --disableFastRender -p 1313
 
 ### Update theme
 
-```shell
+```bash
 hugo mod get -u
 hugo mod tidy
 ```
