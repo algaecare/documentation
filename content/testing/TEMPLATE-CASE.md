@@ -1,6 +1,7 @@
 ---
-title: TC 0.0 Testname
+title: VORLAGE TESTCASE
 type: docs
+weight: 0
 ---
 | Datum       | Verantwortlich |
 |-------------|----------------|
