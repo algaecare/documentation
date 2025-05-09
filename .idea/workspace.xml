@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36edfbcc-bf53-4fe2-82cf-83c788f802bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/guides/einfuehrung.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guides/hardware/algae care app.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guides/hardware/dokumentation server.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guides/hardware/smb server.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guides/hardware/ssh.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/guides/hardware/wlan access point.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/anforderungen.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/aufgabestellung.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/bausteinansicht/bausteinansicht1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/bausteinansicht/schnittstellen.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/bausteinansicht/zustaende.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/begriffe.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/entwurfsentscheidungen.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/kontextabgrenzung.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/laufzeitsicht.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/qualitätsziele.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/randbedingungen.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/sad/verteilungssicht.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/1.0 smoke tests/case 1.1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/1.0 smoke tests/case 1.2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.5.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.6.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.7.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.8.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/2.0 funktionstests/case 2.9.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/3.0 iIntegrationstests/case 3.1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/3.0 iIntegrationstests/case 3.2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/3.0 iIntegrationstests/case 3.3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/4.0 usability tests/case 4.1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/4.0 usability tests/case 4.2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/5.0 performance tests/case 5.1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/5.0 performance tests/case 5.2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/6.0 hardware tests/case 6.1.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/6.0 hardware tests/case 6.2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/6.0 hardware tests/case 6.3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/6.0 hardware tests/case 6.4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/6.0 hardware tests/case 6.5.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/6.0 hardware tests/case 6.6.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/6.0 hardware tests/case 6.7.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/case template.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/testplan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/testing/usability test template.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/guides/first-page copy 2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/guides/first-page.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/guides/first-page.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/guides/folder/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/guides/hardware/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/guides/folder/leaf.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/sad/_index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/sad/_index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/testing/_index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/categories/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/categories/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/compiled/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/compiled/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/de.search-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/de.search-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/de.search.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/de.search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-dark.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon-dark.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/first-page-copy-2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/first-page-copy-2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/first-page-copy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/first-page-copy/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/first-page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/first-page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/folder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/folder/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/folder/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/folder/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/folder/leaf/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/folder/leaf/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/guides/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/guides/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo-dark.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo-dark.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sad/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/sad/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sad/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sad/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/tags/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/tags/index.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/testing/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/testing/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/testing/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/testing/index.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;anja.zivkovic&quot;,
+      &quot;fullname&quot;: &quot;Anja Zivkovic&quot;
+    }
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.fhnw.ch/ip12-24vt/ip12-24vt_algae_care/docu.git&quot;,
+    &quot;second&quot;: &quot;7bcedecc-30b7-4847-8944-c531f684afe3&quot;
+  }
+}</component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2wqdoV74HmNzgoamncevkwi6bnO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Hugo.start.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "hextra-migration",
+    "go.import.settings.migrated": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "js.debugger.nextJs.config.created.client": "true",
+    "js.debugger.nextJs.config.created.server": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/anjaz/Desktop/docu/content/guides/hardware",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anjaz\Desktop\docu\content\guides\hardware" />
+      <recent name="C:\Users\anjaz\Desktop\docu\content\testing" />
+      <recent name="C:\Users\anjaz\Desktop\docu\content\testing\6.0 hardware tests" />
+      <recent name="C:\Users\anjaz\Desktop\docu\content\testing\5.0 performance tests" />
+      <recent name="C:\Users\anjaz\Desktop\docu\content\testing\4.0 usability tests" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="HUGO_RUN_CONFIGURATION" factoryName="Hugo configuration factory">
+      <option name="hugo.plugin.arguments" value="" />
+      <option name="hugo.plugin.run.server" value="run" />
+      <option name="hugo.plugin.custom.project.dir" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36edfbcc-bf53-4fe2-82cf-83c788f802bd" name="Changes" comment="" />
+      <created>1746773213159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746773213159</updated>
+      <workItem from="1746773215709" duration="135000" />
+      <workItem from="1746773360482" duration="166000" />
+      <workItem from="1746773548869" duration="84000" />
+      <workItem from="1746774382615" duration="221000" />
+      <workItem from="1746774682974" duration="236000" />
+      <workItem from="1746774965792" duration="3956000" />
+      <workItem from="1746782061256" duration="6778000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
