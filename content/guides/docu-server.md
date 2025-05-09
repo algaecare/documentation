@@ -2,15 +2,14 @@
 title: Dokumentation-Server
 type: docs
 ---
-import { Callout } from 'nextra/components'
 
 Dieser Abschnitt beschreibt die Konfiguration des Dokumentationsservers des Raspberry Pi.
 
-<Callout type="info" emoji="">
-    Sobald ein Client mit dem WLAN-Netzwerk des Raspberry Pi verbunden ist, kann die Dokumentation über die IP-Adresse des Raspberry Pi erreicht werden:
-    - `http://192.168.1.1`
-    - `https://host.algaecare`
-</Callout>
+{{< callout type="info" >}}
+Sobald ein Client mit dem WLAN-Netzwerk des Raspberry Pi verbunden ist, kann die Dokumentation über die IP-Adresse des Raspberry Pi erreicht werden:
+- `http://192.168.1.1`
+- `https://host.algaecare`
+{{< /callout >}}
 
 ## Installation
 
