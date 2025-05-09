@@ -1,4 +1,4 @@
-image: klakegg/hugo:latest-alpine
+image: hugomods/hugo:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
