@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5b527c7-2a63-4eef-a3d9-b0db380ddec4" name="Changes" comment="hextra migration init">
-      <change beforePath="$PROJECT_DIR$/public/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" afterDir="false" />
+    <list default="true" id="a5b527c7-2a63-4eef-a3d9-b0db380ddec4" name="Changes" comment="add gitlab pipeline">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Shell Script.start.executor": "Run",
     "git-widget-placeholder": "hextra-migration",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
@@ -66,17 +66,19 @@
       <recent name="$PROJECT_DIR$/content/docu/hardware" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Next.js: server-side">
-    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
-      <method v="2" />
-    </configuration>
-    <configuration name="Next.js: server-side" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
+  <component name="RunManager">
+    <configuration name="start" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="hugo mod tidy &amp;&amp; hugo server --logLevel debug --disableFastRender -p 1313" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
       <envs />
       <method v="2" />
     </configuration>
@@ -103,7 +105,7 @@
       <workItem from="1744181289717" duration="2859000" />
       <workItem from="1746773037310" duration="2029000" />
       <workItem from="1746779583324" duration="11000" />
-      <workItem from="1746789338924" duration="100000" />
+      <workItem from="1746789338924" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="migrate nextra v3 to v4">
       <option name="closed" value="true" />
@@ -193,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746773128091</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add gitlab pipeline">
+      <option name="closed" value="true" />
+      <created>1746789493005</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746789493005</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +232,7 @@
     <MESSAGE value="add comments for ssh page" />
     <MESSAGE value="add SSH" />
     <MESSAGE value="hextra migration init" />
-    <option name="LAST_COMMIT_MESSAGE" value="hextra migration init" />
+    <MESSAGE value="add gitlab pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitlab pipeline" />
   </component>
 </project>
