@@ -14,6 +14,7 @@ hugo.linux
 
 # Intellij IDEA
 .idea/
+.idea/*
 
 # MacOS
 .DS_Store
