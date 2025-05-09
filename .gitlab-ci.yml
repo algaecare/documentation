@@ -1,0 +1,18 @@
+image: klakegg/hugo:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+cache:
+  paths:
+  - public
+  - resources
+
+pages:
+  script:
+  - hugo --minify
+  artifacts:
+    paths:
+    - public
+  rules:
+  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

@@ -12,3 +12,9 @@
   font-size: 1.25rem;
   padding-top: 0.3rem;
 }
+
+:root {
+  --primary-hue: 175deg;
+  --primary-saturation: 49%;
+  --primary-lightness: 45%;
+}
