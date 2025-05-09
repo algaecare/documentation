@@ -81,3 +81,6 @@ hugo mod tidy
 
 See [Update modules](https://gohugo.io/hugo-modules/use-modules/#update-modules) for more details.
 
+
+## DOCU-Documentation
+https://imfing.github.io/hextra/docs/
