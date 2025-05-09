@@ -1,9 +1,9 @@
 ---
-title: Testplan
+title: Testing
 type: docs
 weight: 1
 ---
-    ## Einführung Testing
+
 1. Smoke Tests: Grundlegende Tests, um sicherzustellen, dass die Kernfunktionalität vorhanden ist.
 2. Funktionstests: Tests einzelner Module wie Eingabefunktionen und Simulation.
 3. Integrationstests: Sicherstellen, dass alle Module zusammenarbeiten.
