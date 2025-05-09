@@ -1,5 +1,5 @@
 ---
-title: 5.0 Bausteinsicht
+title: 5. Bausteinsicht
 type: docs
 weight: 5
 ---
