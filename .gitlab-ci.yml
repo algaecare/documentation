@@ -8,7 +8,12 @@ cache:
   - public
   - resources
 
-pages:
+stages:
+- build
+- deploy
+
+build_site:
+  stage: build
   script:
   - hugo --minify
   artifacts:
