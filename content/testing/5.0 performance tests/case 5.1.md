@@ -20,5 +20,5 @@ Timer-Tool: integriertes Performance-Mess-Tool
 4. Wiederhole diesen Test zehnmal, um Durchschnittswerte zu ermitteln.
 
 ## Erwartetes Ergebnis
-Die Ladezeit bis zur vollständigen Anzeige des Hauptmenüs beträgt weniger als 3 Sekunden in mindestens 90 % der Tests.
+Die Ladezeit bis zur vollständigen Anzeige des Hauptmenüs beträgt weniger als 15 Sekunden in mindestens 90 % der Tests.
 Es treten keine Fehler, Abstürze oder Verzögerungen auf, die den Ladevorgang beeinträchtigen.

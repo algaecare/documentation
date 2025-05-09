@@ -9,7 +9,7 @@ type: docs
 Die Werte des Objekts wurden überprüft.
 
 ## Testdaten
-Angepasste Werte: Sauerstoff < 30%, pH-Wert > 9, Temperatur > 35°C.
+Angepasste Werte: Sauerstoff , co2, Temperatur.
 
 ## Auszuführende Schritte
 1. Beobachte, wie sich das Ökosystem auf dem Bildschirm anpasst.

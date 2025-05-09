@@ -9,7 +9,7 @@ type: docs
 Eingaben wurden gemacht, und Werte haben sich geändert.
 
 ## Testdaten
-Änderungen: Sauerstoff (-10%), pH-Wert (+1).
+Änderungen: Sauerstoff , CO2.
 
 ## Auszuführende Schritte
 1. Beobachte die Kommentare des Axolotls nach einer Eingabe.

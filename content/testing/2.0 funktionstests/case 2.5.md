@@ -9,7 +9,7 @@ type: docs
 Das System läuft und ein Objekt wurde erkannt.
 
 ## Testdaten
-Eingabewerte: Sauerstoff (-10%), pH-Wert (+1), Temperatur (+5°C).
+Eingabewerte: Sauerstoff , CO2, Temperatur .
 
 ## Auszuführende Schritte
 1. Wirf ein definiertes Objekt ein.
