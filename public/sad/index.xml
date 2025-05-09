@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algae Care – Software Architecture Documentation</title>
+    <link>//localhost:1313/sad/</link>
+    <description>Recent content in Software Architecture Documentation on Algae Care</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    
+	  <atom:link href="//localhost:1313/sad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,39 @@
+---
+title: Schnittstellen
+type: docs
+---
+In diesem Kapitel werden sämtliche Schnittstellen beschrieben, über die die Software mit Hardware kommuniziert.
+
+## Simple Darstellung
+
+```mermaid
+graph TD
+subgraph AlgaeCare
+        subgraph App
+            AppStarter
+            Controller
+            Model
+            View
+        end
+        subgraph Hardware
+            NFC-Input
+            Display
+        end
+    end
+
+AppStarter -->|initializes| Controller
+Controller -->|uses| Model
+Controller -->|changes| View
+
+NFC-Input ==>|sends event| Controller
+Controller ==>|changes| Display
+```
+
+Die dick markierten Linien stellen die Schnittstellen dar.
+Es gibt 2 Schnittstellen:
+1. NPC-Input -> Controller: Erkannte NFC Eingaben lösen ein Event aus, auf welches der controller reagiert.
+2. Controller -> Display: Der Controller verändert die View Elemente und zeigt diese auf dem Display an.
+
+## Schnittstellen im Klassendiagramm
+
+TODO

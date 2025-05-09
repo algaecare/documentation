@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Super Water";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Super Water"),
+    url("https://fonts.cdnfonts.com/s/118828/Super Water.woff") format("woff");
+}
+
+.hx-font-extrabold {
+  font-family: "Super Water", sans-serif;
+  font-weight: normal;
+  font-size: 1.25rem;
+  padding-top: 0.3rem;
+}
+
+:root {
+  --primary-hue: 175deg;
+  --primary-saturation: 49%;
+  --primary-lightness: 45%;
+}
