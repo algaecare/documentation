@@ -3,92 +3,73 @@ title: 3. Kontextabgrenzung
 type: docs
 weight: 3
 ---
-In diesem Abschnitt wird das Umfeld von Algae Care beschrieben, um die Rolle des Exponats innerhalb der Ausstellung und seine Interaktion mit der Umgebung klar zu definieren. Der Fokus liegt darauf, die Zielgruppe des Systems zu identifizieren und die Schnittstellen zu externen Systemen oder Komponenten zu beschreiben.
 
-Die Kontextabgrenzung ermöglicht es, das Projekt besser einzuordnen, indem sie die Grenzen des Systems sowie seine Abhängigkeiten und Wechselwirkungen mit anderen Systemen oder Elementen aufzeigt. Dadurch wird sichergestellt, dass alle Beteiligten ein gemeinsames Verständnis über den Anwendungsbereich und die technischen Rahmenbedingungen des Exponats teilen.
+Dieser Abschnitt beschreibt die Einordnung des Systems in seine Umgebung. Er zeigt die direkten Nachbarn des Systems (Benutzer, andere Systeme, Hardware) und die Schnittstellen zu diesen Nachbarn. Zudem wird die Systemgrenze klar gezogen und der funktionale Umfang (Scope) des Systems definiert.
 
-Dieser Abschnitt beantwortet folgende Fragen:
-- Für welche Benutzerinnen und Benutzer ist Algae Care vorgesehen?
-- Mit welchen externen Systemen oder Komponenten interagiert das Exponat?
-- Welche Rolle spielt das Exponat im Gesamtkontext der Ausstellung?
+### 3.1 Kontextdiagramm (Beschreibung)
 
-Die präzise Abgrenzung des Kontexts ist entscheidend, um die Anforderungen an das System zu definieren und dessen erfolgreiche Integration in die Ausstellung zu gewährleisten.
-
-## Fachlicher Kontext
+Das "Algae Care" Exponat-System kann in seiner Umgebung wie folgt beschrieben werden:
 
 ```mermaid
-graph TD
-    A[Algae Care] -->|Interagiert mit| B[Schülerinnen und Schüler]
-    A -->|Erkennt Eingaben| C[RFID-Reader]
-    C -->|Liest RFID-Tags aus| D[3D-Druckmodelle]
-    D -->|Repräsentieren Umweltfaktoren| E[Alltagsobjekte]
-    A -->|Visualisiert Feedback| F[Monitor]
-    F -->|Zeigt Auswirkungen in Echtzeit| G[Simuliertes Ökosystem]
-    G -->|Fördert Bewusstsein| B
+C4Context
+  title Kontextdiagramm für das "Algae Care" Exponat-System
+
+  Person_Ext(user, "Benutzer", "Jugendliche 7.-9. Klasse")
+
+  System(algaecaresystem, "Algae Care System", "Software auf Raspberry Pi und essentielle Hardware (RFID-Reader, Monitor, Servo-Motoren, LEDs)")
+
+  System_Ext(rfidreader, "RFID/NFC Reader", "Externes Hardwaregerät zum Lesen von Tags")
+  System_Ext(monitor, "Monitor", "Externes Hardwaregerät zur visuellen Ausgabe")
+  System_Ext(servomotors, "Servo-Motoren", "Externe Hardwarekomponenten zur Ausführung physischer Aktionen")
+  System_Ext(leds, "LEDs", "Externe Hardwarekomponenten zur Anzeige von Status/Feedback")
+
+  Rel(user, algaecaresystem, "Interagiert über physische Eingaben und Rezeption von Informationen")
+  Rel(rfidreader, algaecaresystem, "Sendet RFID/NFC Daten an")
+  Rel(algaecaresystem, monitor, "Sendet visuelle Daten an")
+  Rel(algaecaresystem, servomotors, "Steuert")
+  Rel(algaecaresystem, leds, "Steuert")
 ```
 
-### Benutzer (Schülerinnen und Schüler)
+Dieses System interagiert direkt mit folgenden externen Entitäten:
 
-Algae Care richtet sich primär an Jugendliche der 7. bis 9. Schulklasse, die das Exponat interaktiv erleben. Die Benutzer interagieren mit dem System durch haptische Eingaben wie das Platzieren von Alltagsobjekten (z. B. Plastikflaschen oder Kompost) und beobachten die Auswirkungen dieser Handlungen auf ein simuliertes Ökosystem. Diese Interaktion dient nicht nur der Wissensvermittlung, sondern soll auch das Bewusstsein für Nachhaltigkeit und Umweltschutz fördern.
+* **Benutzer (Jugendliche 7.-9. Klasse):** Die Benutzer sind die primären Akteure, die mit dem System interagieren. Ihre Interaktion erfolgt über physische Eingaben und die Rezeption von Informationen.
+* **RFID/NFC Reader:** Ein externes Hardwaregerät, das physisch mit dem System verbunden ist und Eingaben von den 3D-gedruckten Objekten liest.
+* **Monitor:** Ein externes Hardwaregerät, das physisch mit dem System verbunden ist und visuelle Ausgaben des Systems darstellt.
+* **Servo-Motoren:** Externe Hardwarekomponenten, die vom System gesteuert werden, um physische Aktionen im Exponat auszuführen (z.B. Öffnen einer Klappe).
+* **LEDs:** Externe Hardwarekomponenten, die vom System gesteuert werden, um visuelles Feedback oder Statusinformationen anzuzeigen.
 
-### 3D-Druckmodelle (Fremdsystem)
+Die 3D-gedruckten Objekte mit RFID/NFC-Tags sind das *Medium* der Benutzerinteraktion, werden aber vom RFID-Reader gelesen und sind nicht direkt eine "Nachbarsystem"-Entität des Softwaresystems im Sinne eines laufenden Systems oder Geräts, das *mit* dem Softwaresystem kommuniziert. Ihre Erstellung liegt ausserhalb des Scopes des Algae Care Systems.
 
-Für die haptische Interaktion werden physische Alltagsobjekte wie Plastikflaschen oder Abfallstücke verwendet, die mithilfe von 3D-Druck erstellt werden. Diese Objekte repräsentieren verschiedene Umweltfaktoren und ermöglichen den Nutzern, durch einfache Handlungen komplexe ökologische Zusammenhänge zu verstehen. Der 3D-Druck und die Verarbeitung der Modelle erfolgen außerhalb des Systems, ihre Integration ist jedoch entscheidend für das Benutzererlebnis.
+Die Konfigurations-Hardware (Maus/Tastatur) ist ebenfalls extern, wird aber eher für die Wartung und Konfiguration verwendet und ist nicht Teil der Laufzeit-Interaktion im Kontextdiagramm.
 
-### Visualisierungssystem (Fremdsystem)
+### 3.2 Externe Schnittstellen
 
-Das Feedback zu den Benutzeraktionen wird über einen angeschlossenen Monitor dargestellt. Dieses Visualisierungssystem zeigt in Echtzeit, wie die Algen auf die Eingaben der Benutzer reagieren, und veranschaulicht, ob diese Eingaben einen positiven oder negativen Einfluss auf das Ökosystem haben. Der Monitor verzichtet bewusst auf Touchscreen-Funktionen, da diese für die angestrebte Interaktion nicht erforderlich sind. Stattdessen liegt der Fokus auf der klaren und anschaulichen Darstellung der Auswirkungen.
+Die Schnittstellen des "Algae Care" Systems zu seiner Umgebung sind:
 
-### RFID-Reader (Fremdsystem)
+* **Benutzerschnittstelle (UI):**
+    * **Eingabe (Haptisch/Physisch):** Benutzer interagieren durch das Einlegen von 3D-gedruckten Objekten in einen Eingabetrichter und möglicherweise durch die Bedienung eines Hebels (basierend auf früheren Feature-Beschreibungen). Die physischen Objekte fungieren als Eingabe-Trigger, die vom RFID/NFC Reader interpretiert werden.
+    * **Ausgabe (Visuell):** Das System kommuniziert visuell über den angeschlossenen Monitor. Hier werden die Simulation des Ökosystems, die Auswirkungen der Benutzereingaben und ggf. Umweltwerte (Sauerstoffgehalt, Temperatur, pH-Wert - basierend auf F02.2) dargestellt. Der Monitor dient ausschliesslich der Anzeige.
+    * **Ausgabe (Akustisch):** Das System kann Töne oder Erklärungen über Lautsprecher ausgeben (basierend auf F02.3).
+    * **Ausgabe (Visuell/Status):** LEDs (F01.1) zeigen den Zustand des Algensystems an (blau, rot, weiss).
+* **Hardwareschnittstellen:**
+    * **RFID/NFC Reader Interface:** Schnittstelle zum Auslesen der Tags auf den 3D-Objekten. Die Verbindung erfolgt voraussichtlich über USB oder GPIO-Pins des Raspberry Pi. Das System empfängt Daten, die das identifizierte Objekt repräsentieren.
+    * **Monitor Interface:** Schnittstelle zur Steuerung der Anzeige auf dem Monitor. Die Verbindung erfolgt über HDMI. Das System sendet Grafikdaten und Informationen zur Darstellung der Simulation und Umweltwerte.
+    * **Servo Motor Interface:** Schnittstelle zur Ansteuerung der Servo-Motoren. Die Verbindung erfolgt voraussichtlich über GPIO-Pins des Raspberry Pi. Das System sendet Steuersignale, um die Motoren zu bewegen.
+    * **LED Interface:** Schnittstelle zur Ansteuerung der LEDs. Die Verbindung erfolgt voraussichtlich über GPIO-Pins des Raspberry Pi. Das System sendet Signale zur Steuerung von Farbe und Zustand der LEDs.
+* **Konfigurations-/Wartungsschnittstelle:** Eine separate Schnittstelle, wahrscheinlich über USB-Anschlüsse, ermöglicht den Anschluss von Maus und Tastatur (F05) zur direkten Interaktion mit dem zugrundeliegenden Betriebssystem des Raspberry Pi und den Zugriff auf Konfigurationsdateien (`app.properties`).
 
-Der RFID-Reader wird eingesetzt, um die 3D-gedruckten Alltagsobjekte zuverlässig zu erkennen und die Benutzerinteraktionen mit dem Exponat zu ermöglichen. Jedes Objekt ist mit einem RFID-Tag ausgestattet, das vom Reader ausgelesen wird, sobald das Objekt in das dafür vorgesehene Eingabefeld platziert wird.
+### 3.3 Abgrenzung (Scope)
 
-Der RFID-Reader dient dabei als zentrale Schnittstelle zur Erkennung und Zuordnung der Objekte. Auf Basis der erkannten Objekte bewertet das System deren Auswirkungen auf das simulierte Ökosystem und stellt die Ergebnisse visuell auf dem Monitor dar.
+Der Scope des "Algae Care" Systems umfasst:
 
-Die Nutzung eines RFID-Readers bietet folgende Vorteile:
-- **Robuste Erkennung:** Jedes Objekt wird eindeutig identifiziert, wodurch Fehleingaben minimiert werden.
-- **Kontaktlose Bedienung:** Die Interaktion ist einfach und intuitiv, ohne dass mechanische Teile oder Sensoren verschleißen.
-- **Flexibilität:** Neue Objekte können durch Hinzufügen passender RFID-Tags leicht in das System integriert werden.
+* Die Software, die auf dem Raspberry Pi läuft und für die Verarbeitung der RFID-Eingaben, die Durchführung der Simulation, die Steuerung der Ausgabegeräte (Monitor, Servos, LEDs) und die Verwaltung der Konfiguration zuständig ist.
+* Die direkt an den Raspberry Pi angeschlossene Hardware, die für die Kernfunktionalität des Exponats benötigt wird: der RFID/NFC Reader, der Monitor, die Servo-Motoren und die LEDs.
 
-Durch den Einsatz des RFID-Readers wird sichergestellt, dass die Eingaben der Benutzer präzise erkannt und korrekt verarbeitet werden, was das Nutzererlebnis verbessert und die Interaktion mit dem Exponat erleichtert.
+Explizit **ausserhalb** des Scopes liegen:
 
-## Technischer- oder Verteilungskontext
-
-### Übersicht
-
-Der technische Kontext von Algae Care beschreibt die Interaktion des Systems mit seinen Hauptkomponenten und deren Umgebung. Das System basiert auf einer modularen Architektur, die die Verarbeitung von Eingaben, die Simulation von Umweltreaktionen und die Visualisierung der Ergebnisse umfasst. Es wurde entwickelt, um sowohl robust als auch flexibel zu sein und kann unabhängig von externen Systemen betrieben werden.
-
-### Hauptkomponenten und deren Rollen
-1. **Raspberry Pi (zentrale Recheneinheit):**
-- Verantwortlich für die Verarbeitung der RFID-Eingaben, die Durchführung der Simulationen und die Steuerung der visuellen Ausgaben.
-- Betriebssystem: Raspberry Pi OS.
-- Java 21 wird als Hauptprogrammiersprache verwendet, unterstützt durch die Pi4J-Bibliothek zur Hardwarekommunikation.
-2. **RFID-Reader:**
-- Eingabegerät zur Identifikation der 3D-gedruckten Alltagsobjekte, basierend auf RFID-Tags.
-- Verbindung über USB oder GPIO-Pins.
-- Daten werden direkt an die zentrale Anwendung weitergeleitet.
-3. **Monitor (Visualisierung):**
-- Dient als Anzeige für die Simulationsergebnisse und Benutzeraktionen.
-- Verbindung über HDMI, gesteuert durch die Java-Anwendung.
-4. **3D-Druckobjekte mit RFID-Tags:**
-- Physische Objekte, die vom Benutzer als Eingabe verwendet werden.
-- Tags enthalten eindeutige Identifikationsdaten, die vom RFID-Reader gelesen werden.
-
-### Datenfluss und Interaktion
-- **Eingabe:** Benutzer platzieren ein 3D-Objekt in den vorgesehenen Bereich. Der RFID-Reader erfasst die Tag-Daten und übermittelt sie an die Anwendung.
-- **Verarbeitung:** Die Anwendung interpretiert die Daten und simuliert die Auswirkungen der Eingabe auf das Ökosystem.
-- **Ausgabe: **Die Ergebnisse der Simulation werden in Echtzeit auf dem Monitor visualisiert, einschließlich positiver oder negativer Auswirkungen auf die Algenpopulation.
-
-### Externe Abhängigkeiten
-- **Hardware-Kompatibilität:**
-    - Sicherstellung der Funktionalität mit Raspberry Pi 5 und Pi4J-Bibliothek. Bei Bedarf kann ein Mikrocontroller (z. B. Arduino) als Vermittler eingesetzt werden.
-      **Offline-Fähigkeit:**
-- Das System benötigt keine Internetverbindung und ist vollständig autark.
-
-### Technische Herausforderungen und Lösungen
-- **Störungsfreiheit:** Durch die Verwendung von LF-RFID-Tags wird sichergestellt, dass benachbarte Tags nicht versehentlich ausgelesen werden.
-- **Flexibilität:** Konfigurierbare Parameter (z. B. Sprache und Simulationseinstellungen) ermöglichen einfache Anpassungen über eine zentrale Konfigurationsdatei.
-
-### Fazit
-
-Der technische Kontext von Algae Care kombiniert robuste Hardware mit effizienter Software, um eine interaktive und benutzerfreundliche Erfahrung zu schaffen. Die Architektur gewährleistet, dass das System unabhängig von externen Ressourcen arbeitet, flexibel erweitert werden kann und gleichzeitig den spezifischen Anforderungen einer Ausstellung gerecht wird.
+* Die Benutzer selbst.
+* Die physischen 3D-gedruckten Alltagsobjekte mit RFID/NFC-Tags (ihre Erstellung und physische Existenz sind ausserhalb, ihre Interaktion mit dem Reader ist die Schnittstelle).
+* Die externe Stromversorgung des Exponats und der Komponenten.
+* Das physikalische Gehäuse des Exponats, auch wenn dessen Design die technischen Anforderungen beeinflusst (Transportierbarkeit, Wartbarkeit, physische Integration der Komponenten).
+* Die Werkzeuge, die für die Wartung benötigt werden.
+* Die Primeo Energie Infrastruktur oder andere externe IT-Systeme, da das System offline betrieben wird.
