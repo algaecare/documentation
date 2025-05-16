@@ -3,30 +3,17 @@ title: Software Architecture Documentation
 type: docs
 ---
 
-Einführung
-Die Dokumentation der Software-Architektur ist ein wesentlicher Bestandteil des Softwareentwicklungsprozesses. Dieses Software-Architektur-Dokument (SAD) dient als zentrale Quelle, um die Architektur eines Systems umfassend zu beschreiben. Es stellt sicher, dass alle relevanten Aspekte der Softwareentwicklung – von der Planung bis zur Wartung – klar dokumentiert und nachvollziehbar sind.
-
-Das SAD ist eine lebendige Dokumentation, die während der gesamten Projektdauer aktualisiert wird. Es bildet die Grundlage für die Kommunikation zwischen den verschiedenen Stakeholdern, erleichtert die Zusammenarbeit im Team und dient als Referenz für zukünftige Erweiterungen oder Änderungen. Darüber hinaus stellt es sicher, dass die Qualitätsanforderungen des Systems eingehalten werden.
-
-Projektkontext
-Das Projekt Algae Care wurde initiiert, um Schülerinnen und Schüler der Sekundarstufe auf interaktive und innovative Weise für die Bedeutung von Algen und deren Erhalt zu sensibilisieren. Im Rahmen einer Ausstellung des Energieunternehmens Primeo Energie wird das System als zentrales Exponat präsentiert. Es zeigt auf, wie Algen nicht nur zur nachhaltigen Energiegewinnung beitragen, sondern auch eine Schlüsselrolle im ökologischen Gleichgewicht unseres Planeten spielen.
-
-Ziele des SAD
-Transparenz: Sicherstellen, dass die Architekturentscheidungen nachvollziehbar dokumentiert sind.
-Kommunikation: Bereitstellung eines gemeinsamen Verständnisses für alle Projektbeteiligten, einschließlich Entwicklern, Architekten und Stakeholdern.
-Wartbarkeit: Unterstützung der langfristigen Weiterentwicklung und Wartung des Systems.
-Die Architektur des Systems wurde so gestaltet, dass sie flexibel auf veränderte Anforderungen reagieren kann. Dieses Dokument stellt die notwendigen Informationen bereit, um die Struktur und die zentralen Entwurfsentscheidungen des Systems zu verstehen.
-
-Struktur des SAD
-Das SAD folgt der etablierten Struktur und umfasst folgende Kapitel:
-
-Aufgabestellung
-Qualitätsziele
-Randbedingungen
-Kontextabgrenzung
-Bausteinsicht
-Laufzeitsicht
-Verteilungssicht
-Entwurfsentscheidungen
-Glossar
-Mit diesem Dokument soll sichergestellt werden, dass das Projekt sowohl im aktuellen Entwicklungsprozess als auch langfristig erfolgreich ist.
+{{< cards cols="1" >}}
+{{< card link="1-einfuehrung-und-ziele" title="1. Einführung & Ziele" subtitle="Grundlegende Anforderungen, insbesondere Qualitätsziele" icon="flag" >}}
+{{< card link="2-randbedingungen" title="2. Randbedingungen" subtitle="Regelungen und externe Randbedingungen" icon="shield-check" >}}
+{{< card link="3-kontextabgrenzung" title="3. Kontext & Abgrenzung" subtitle="Externe Systeme und Schnittstellen" icon="switch-horizontal" >}}
+{{< card link="4-loesungsstrategie" title="4. Lösungsstrategie" subtitle="Kernideen und Lösungsansätze" icon="light-bulb" >}}
+{{< card link="5-bausteinansicht" title="5. Bausteinsicht" subtitle="Aufbau des Quellcodes, Modularisierung (hierarchisch)" icon="puzzle" >}}
+{{< card link="6-laufzeitsicht" title="6. Laufzeitsicht" subtitle="Wichtige Laufzeitszenarien" icon="play" >}}
+{{< card link="7-verteilungssicht" title="7. Verteilungssicht" subtitle="Hardware, Infrastruktur & Deployment" icon="server" >}}
+{{< card link="8-querschnittliche-konzepte" title="8. Querschnittliche Konzepte" subtitle="Querschnittsthemen, oft sehr technisch und detailliert" icon="template" >}}
+{{< card link="9-architekturentscheidungen" title="9. Architekturentscheidungen" subtitle="Wichtige Entscheidungen (nicht anderweitig beschrieben)" icon="scale" >}}
+{{< card link="10-qualitaetsanforderungen" title="10. Qualitätsanforderungen" subtitle="Qualitätsbaum, Qualitätsszenarien" icon="clipboard-check" >}}
+{{< card link="11-risiken-und-technische-schulden" title="11. Risiken & Technische Schulden" subtitle="Bekannte Probleme und Risiken" icon="exclamation" >}}
+{{< card link="12-glossar" title="12. Glossar" subtitle="Wichtige und spezifische Begriffe ('gemeinsame Sprache')" icon="bookmark" >}}
+{{< /cards >}}

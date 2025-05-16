@@ -1,0 +1,59 @@
+---
+title: 11. Risiken und technische Schulden
+weight: 11
+type: docs
+---
+*Diese wurden direkt aus der [offiziellen Aufgabenstellung](https://fhnw-projecttrack.atlassian.net/wiki/spaces/ip1224vt/pages/344394836/Anforderungen+an+die+Projekte) übernommen.*
+
+## Allgemeine Anforderungen
+
+Alle Spiele/Simulationen haben jedoch gemeinsame Anforderungen. Die folgenden allgemeinen Anforderungen wurden von den Auftraggebern in Zusammenarbeit mit den POs und den Coaches festgelegt:
+
+- **Primäre Zielgruppe:** Jugendliche im 7. bis 9. Schuljahr
+- **Zeit:**Pro Spielrunde 1-3 Minuten (4 Kinder sollten in ca. 5 Minuten fertig sein). Dies ist wichtig, wenn grössere Schulklassen die Spiele spielen.
+- Die Spiele sind **selbsterklärend** oder können in 30 Sekunden erklärt werden.
+- Die Spiele müssen eine **schnelle Antwortzeit** haben (keinen Lag), sonst verlieren die Spieler:innen das Interesse.
+- **Konfigurierbare Parameter** sollen in eine Datei ausgelagert werden, so dass die Anwendungen in 5 Minuten konfiguriert werden können.
+- Die Spiele sollen **mehrsprachig** (D, F, E) eingesetzt werden können. Das bedeutet, dass Texte und Strings ausgelagert werden und nicht hart im Code vorhanden sind.
+  Die Übersetzung wird von Primeo gemacht, ausser jemand im Team ist bilingue und möchte das machen, ansonsten genügt eine deutsche Implementierung.
+- Die **Sprache** soll in der Applikation oder mindestens in einer Konfiguration **gewechselt** werden können.
+- Wenn möglich sollten die Exponate **ohne Internet** verwendbar sein, WIFI wäre aber prinzipiell möglich.
+- Die Spiele sollen **gut transportierbar** sein, da auch Ausstellungen ausserhalb stattfinden können. Das bedeutet:
+    - Je mobiler, desto besser, aber ohne Kompromisse bei der Spielidee.
+    - Schnell auf- und abbaubar.
+    - Sicher und einfach von einer, maximal zwei Personen zu transportieren.
+    - Bei sperrigen Exponaten kann die Transportierbarkeit z.B. durch Griffe etc. verbessert werden.
+
+
+## Spezielle Anforderungen an die Wartbarkeit und den Betrieb:
+- Tastatur und Maus müssen **von aussen** anschliessbar sein (über Stecker), allgemein gilt Anschlüsse sollen gut zugänglich sein.
+- Bei Anschlüssen möglichst **Standards** verwenden.
+- **Autostart**: Wenn Strom angeschlossen ist, soll die Anwendung starten.
+- Exponat soll nicht komplett verschraubt sein, damit das Innenleben leicht zugänglich ist.
+- 3D-Druckmodelle gehören mit in die Dokumentation.
+- Die Spiele sollten haptische Elemente enthalten (Spielbrett, Spielfiguren, Bedienelemente etc., abhängig vom konkreten Spiel). Berücksichtigen Sie die technischen Anforderungen und die Bedingungen zum Material.
+- Keine Abhängigkeiten von Drittplattformen
+
+## Technische Rahmenbedingungen
+- **Programmiersprache:** Java 21.
+- **Library:** [Pi4J](https://pi4j.com/)
+- **Konfiguration:** Die Konfiguration der Anwendung wird mit java.util.Properties umgesetzt. Die Konfigurationsdatei muss app.properties heissen und muss im Default-Package abgelegt werden. Es soll die Plain-Text-Variante verwendet werden, nicht die XML-Variante. (Hinweise zur Verwendung von Properties).
+- **Datenbank:** SQLite DB integriert in die Applikation auf der jeweiligen Plattform. Falls Sie für ihr Spiel zusätzliche Daten persistieren möchten, empfehlen wir, das Datenbanksystem SQLite zu verwenden. SQLite verwendet eine sog. serverless Architektur, das Datenbankverwaltungssystem ist dabei Teil der Applikation.
+- **Webserver:** Es werden keine zusätzlichen Webserver verwendet.
+
+
+## Anforderungen an den Ausstellungsstand
+
+Der Stand hat drei Grundfunktionen: Er soll Publikum anlocken, das Spiel vorstellen und das Spielen ermöglichen. Idealerweise geschieht dies durch ein Spielobjekt, ein Poster und zwei Betreuungspersonen. Sie vermitteln dem Publikum Antworten auf folgende Fragen:
+
+- Welches ist das Zielpublikum des Spiels?
+- Worum geht es in diesem Spiel?
+- Wie spielt man das Spiel? (Spielregeln)
+- Was kann man bei diesem Spiel lernen?
+- Wer hat das Spiel hergestellt?
+- Wie bekommt man das Spiel?
+- Welche Systemvoraussetzungen braucht das Spiel?
+- Wie installiere ich das Spiel?
+- Lässt sich das Spiel erweitern?
+
+Beim Aufbau des Standes ist darauf zu achten, dass möglichst viele Personen gleichzeitig etwas sehen, lesen, fragen oder tun können.
