@@ -16,9 +16,6 @@ build_site:
   stage: build
   script:
   - hugo --minify
-  artifacts:
-    paths:
-    - public
 
 pages:
   stage: deploy
