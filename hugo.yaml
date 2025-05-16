@@ -37,7 +37,10 @@ params:
       dark: favicon-dark.svg
       link: /
       width: 30
-    width: normal
+    width: wide
+
+  page:
+    width: wide
 
   footer:
     displayCopyright: false
