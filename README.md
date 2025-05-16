@@ -22,15 +22,17 @@ Download & Install for local preview:
 ```shell
 # Clone the repo
 git clone https://gitlab.fhnw.ch/ip12-24vt/ip12-24vt_algae_care/docu
-
+```
+```shell
 # Change directory
 cd docu
-
+```
+```shell
 # Start the server
 hugo mod tidy
 hugo server --logLevel debug --disableFastRender -p 1313
 ```
 
-## For detailed information on how to use Hugo, please refer to the official documentation:
+For detailed information on how to use Hugo, please refer to the official documentation:
 
 https://imfing.github.io/hextra/docs/
