@@ -16,17 +16,15 @@ build_site:
   stage: build
   script:
   - hugo --minify
-  artifacts:
-    paths:
-    - public
 
 pages:
   stage: deploy
   script:
   - echo "Publishing to GitLab Pages..."
+  - cp -r public/* .public
   artifacts:
     paths:
-    - public
+    - .public
   rules:
   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
   dependencies:
