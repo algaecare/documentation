@@ -3,62 +3,33 @@ title: 9. Architekturentscheidungen
 type: docs
 weight: 9
 ---
-In diesem Abschnitt werden zwei besonders interessante Entscheidungen beleuchtet, die beim Entwurf von Algae Care getroffen wurden. Diese Entscheidungen waren entscheidend für die Architektur, Funktionalität und Benutzererfahrung des Systems und spiegeln die Abwägungen zwischen verschiedenen Anforderungen und technischen Möglichkeiten wider.
 
-Ziel dieses Abschnitts ist es, die Hintergründe und Beweggründe hinter den Entwurfsentscheidungen transparent zu machen. Dadurch soll ein besseres Verständnis für die Architektur des Systems vermittelt werden, sowie die Auswirkungen dieser Entscheidungen auf die Funktionalität, Wartbarkeit und Erweiterbarkeit von Algae Care.
+In diesem Abschnitt werden die wichtigsten Architekturentscheidungen dokumentiert, die während der Entwicklung des Algae Care Systems getroffen wurden.
 
-## Entscheidung 1: Wie erkennt Algae Care Alltagsobjekte mittels RFID-Technologie?
+## 9.1 Wahl der GUI-Technologie: Wechsel von TRICK17 zu JavaFX
 
-### Zur Fragestellung
+* **Entscheidung:** Die ursprünglich gewählte GUI-Bibliothek TRICK17 wurde im Verlauf des Projekts durch JavaFX ersetzt.
+* **Hintergrund/Problemstellung:** Zu Beginn des Projekts wurde TRICK17 für die Erstellung der grafischen Benutzeroberfläche evaluiert. Es zeigte sich jedoch schnell, dass TRICK17 nicht die notwendige Dokumentation und den Funktionsumfang bot, um den gestellten Anforderungen an die GUI gerecht zu werden. Dies führte zu Schwierigkeiten in der Entwicklung.
+* **Begründung:** Im Januar 2025 (im zweiten Semester) wurde die Entscheidung getroffen, zu JavaFX zu wechseln. JavaFX bot eine deutlich bessere und umfassendere Dokumentation sowie eine ausgereiftere Entwicklungsumgebung mit vielen vordefinierten Elementen und verfügbaren Tutorials. Dies vereinfachte die Entwicklung komplexerer GUI-Elemente und Interaktionen.
+* **Auswirkungen:** Der Wechsel zu JavaFX ermöglichte eine stabilere und funktionsreichere Benutzeroberfläche. Er erforderte jedoch auch eine Anpassung der bereits entwickelten GUI-Komponenten und des Wissensaufbaus im Team bezüglich JavaFX.
 
-Eine zentrale Anforderung an Algae Care ist die zuverlässige und präzise Erkennung der 3D-gedruckten Alltagsobjekte, die als Eingabemedium dienen. Wie erfolgt die Identifikation dieser Objekte?
+## 9.2 Wahl des Zustandsmanagements: Einführung des GameStateManager
 
-Die Erkennung basiert auf der Verwendung von RFID-Tags, die an den Objekten befestigt werden, sowie einem RFID-Reader, der diese Tags ausliest. Es stehen verschiedene Frequenzbereiche (LF und HF) sowie mehrere Reader- und Tag-Optionen zur Auswahl. Jede dieser Optionen hat spezifische Vor- und Nachteile, die die Robustheit, Benutzerfreundlichkeit und Anpassungsfähigkeit des Systems beeinflussen.
+* **Entscheidung:** Es wurde entschieden, einen zentralen `GameStateManager` zur Verwaltung des Anwendungszustands und der Spiellogik zu entwickeln.
+* **Hintergrund/Problemstellung:** In Systemen mit komplexen Interaktionen und verschiedenen Zuständen (wie einem Spiel oder einer interaktiven Installation) ist eine klare Struktur für das Zustandsmanagement entscheidend. Eine direkte Kommunikation und gegenseitige Aufrufe zwischen allen Komponenten können schnell zu einem schwer wartbaren "Spaghetti-Code" führen.
+* **Begründung:** Der `GameStateManager` ermöglicht eine entkoppelte Architektur. Komponenten müssen nicht wissen, welche anderen Komponenten auf einen bestimmten Zustand reagieren. Sie *emitieren* lediglich Events (Zustandsänderungen), und der `GameStateManager` benachrichtigt alle relevanten Listener. Dies vereinfacht die GameLogic, da Aktionen zentral über den aktuellen `GameState` gesteuert werden, von dem alle interessierten Komponenten erben oder auf den sie reagieren können.
+* **Auswirkungen:** Dieses Konzept führte zu einer klareren Struktur der Applikation, verbesserte die Wartbarkeit und erleichtere die Implementierung der Spiellogik und der Übergänge zwischen verschiedenen Zuständen.
 
-### Relevante Einflussfaktoren
+## 9.3 Wahl der Datenhaltung für statische Daten: Nutzung von CSV-Dateien
 
-#### Randbedingungen
+* **Entscheidung:** Statt einer Datenbank (wie in einer früheren Version kurzzeitig evaluiert) wurde entschieden, statische Konfigurations- und Textdaten in CSV-Dateien zu speichern.
+* **Hintergrund/Problemstellung:** Es gab die Notwendigkeit, statische Daten wie Spracheinstellungen, NFC-Chip-Mappings und Textinhalte für die Benutzeroberfläche zu speichern und zu verwalten. Diese Daten müssen vom Kunden (Primero Energie) einfach anpassbar sein.
+* **Begründung:** Die Verwendung von CSV-Dateien wurde gewählt, da dies ein sehr zugängliches Format ist, das mit einfachen Tools wie Microsoft Excel oder LibreOffice Calc bearbeitet werden kann. Dies eliminiert die Notwendigkeit von Datenbankkenntnissen beim Kunden und senkt die Hürde für die Datenpflege. In Abstimmung mit dem Team wurde entschieden, von einer vorherigen Überlegung, SQLite zu verwenden, abzusehen, um die Komplexität auf Kundenseite zu reduzieren.
+* **Auswirkungen:** Die Datenhaltung in CSV-Dateien ist für statische, weniger komplexe Daten ausreichend und sehr wartungsfreundlich für den Kunden. Für komplexere oder dynamische Daten wäre dieser Ansatz jedoch nicht geeignet. Die Robustheit gegenüber Formatierungsfehlern in den CSV-Dateien muss bei der Bearbeitung berücksichtigt werden.
 
-- Betrieb auf Raspberry Pi mit Pi4J-Bibliothek.
-- Minimierung von Interferenzen durch benachbarte RFID-Tags.
-- Robustheit gegenüber äußeren Einflüssen (z. B. Material des Gehäuses oder Umgebung).
+## 9.4 Konzept der Animationen: Hybrid aus Bildsequenzen und JavaFX-Animationen
 
-#### Maßgeblich betroffene Qualitätsmerkmale
-
-- Zuverlässigkeit: Störungsfreies Auslesen der Tags, auch bei hoher Nutzung.
-- Benutzerfreundlichkeit: Sofortige und präzise Erkennung der eingegebenen Objekte.
-- Flexibilität: Möglichkeit, neue Objekte und Tags einfach hinzuzufügen.
-
-#### Betroffene Risiken
-
-- Interferenzen durch Tags, die in der Nähe gelagert werden.
-- Lesefehler durch Materialdämpfung (z. B. durch Gehäusematerial oder Mehrschichtaufbau).
-- Kompatibilitätsprobleme zwischen Readern und Raspberry Pi 5.
-
-#### Betrachtete Alternativen
-
-1. **Frequenzbereiche:**
-- LF (Low Frequency):
-    - Weniger störanfällig durch geringere Reichweite.
-    - Höhere Robustheit bei nah beieinander gelagerten Tags.
-- HF (High Frequency):
-    - Einfachere Verfügbarkeit der Hardware.
-    - Kompatibilität mit bestehenden Technologien wie Smartphones.
-2. **RFID-Reader:**
-- Option 1: RC522 (HF): Günstig und kompatibel mit HF-Tags.
-- Option 2: ACR122U (HF): Unterstützt das Schreiben und Lesen von Tags, bietet jedoch eingeschränkte Kompatibilität mit Raspberry Pi 5.
-3. **RFID-Tags:**
-- LF-Tags (z. B. Jetons): Robuster und weniger anfällig für Störungen, jedoch teurer und schwerer erhältlich.
-- HF-Tags (z. B. Klebetags): Einfach zu montieren, kostengünstig und kompatibel mit RC522, aber potenziell störanfälliger.
-
-#### Entscheidung
-
-Nach Abwägung der Qualitätsziele und Risiken wurde entschieden:
-
-- RFID-Frequenz: LF (Low Frequency) wird verwendet, um Störungen durch benachbarte Tags zu minimieren und eine höhere Zuverlässigkeit im Ausstellungskontext zu gewährleisten.
-- Reader: Ein LF-Reader, der mit Pi4J kompatibel ist, wird integriert. Falls es Kompatibilitätsprobleme gibt, kann ein Mikrocontroller (z. B. Arduino) zwischengeschaltet werden.
-- Tags: Robuste LF-Tags (Jetons) werden bevorzugt, da sie besser für den langfristigen Einsatz und die wiederholte Nutzung geeignet sind.
-
-#### Begründung
-
-Die Entscheidung für LF und robuste Tags gewährleistet die Zuverlässigkeit des Systems und minimiert potenzielle Interferenzen. Der Leseradius ist optimal, um eine eindeutige Identifizierung der eingegebenen Objekte zu ermöglichen, ohne dass andere Tags versehentlich ausgelesen werden. Darüber hinaus ist das System skalierbar und kann bei Bedarf durch zusätzliche Tags oder neue Hardware erweitert werden.
+* **Entscheidung:** Die Umsetzung von Animationen erfolgt als Hybrid-Ansatz, bei dem sowohl Bildsequenzen als auch native JavaFX-Animationen verwendet werden.
+* **Hintergrund/Problemstellung:** Die Darstellung von Animationen ist ein zentrales Element der Benutzeroberfläche. Ursprünglich war geplant, viele Animationen rein über Bildsequenzen zu realisieren. Beim Test auf der Zielhardware (Raspberry Pi) zeigte sich jedoch, dass die verfügbaren RAM-Ressourcen für eine flüssige Darstellung von umfangreichen Bildsequenzen nicht ausreichend waren.
+* **Begründung:** Aufgrund der Einschränkungen des Raspberry Pis musste ein Kompromiss gefunden werden. Ein Teil der Animationen, insbesondere solche mit komplexeren grafischen Effekten, die extern (z.B. mit Adobe After Effects) erstellt wurden, werden weiterhin als optimierte Bildsequenzen geladen und abgespielt. Andere Animationen, die sich einfacher programmieren lassen (z.B. einfache Bewegungen, Skalierungen, Opazitätsänderungen), wurden stattdessen nativ mit den Animationsfunktionen von JavaFX umgesetzt, da dies ressourcenschonender ist und keine grossen Bilddatenmengen im Speicher halten muss.
+* **Auswirkungen:** Dieser hybride Ansatz ermöglicht die Darstellung notwendiger Animationen innerhalb der Hardware-Beschränkungen des Raspberry Pis. Er erfordert jedoch zwei unterschiedliche Implementierungsansätze für Animationen (Laden und Abspielen von Bildsequenzen vs. Nutzung der JavaFX-Animations-API), was die Entwicklung geringfügig komplexer macht. Die Optimierung der Bildsequenzen (Auflösung, Kompression) war ebenfalls notwendig.
