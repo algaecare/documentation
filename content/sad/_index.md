@@ -1,6 +1,7 @@
 ---
-title: Software Architecture Documentation
+title: Technische Dokumentation
 type: docs
+weight: 2
 ---
 
 {{< cards cols="1" >}}

@@ -1,7 +1,7 @@
 ---
-title: Testing
+title: Testkonzept
 type: docs
-weight: 1
+weight: 3
 ---
 
 1. Smoke Tests: Grundlegende Tests, um sicherzustellen, dass die Kernfunktionalität vorhanden ist.

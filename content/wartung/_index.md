@@ -1,4 +1,0 @@
----
-title: Wartung
-type: docs
----
