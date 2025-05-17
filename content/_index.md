@@ -10,17 +10,17 @@ cascade:
 
 {{< cards cols="2" >}}
   {{< card 
-    link="wartung/" 
+    link="benutzerhandbuch/" 
     title="Benutzerhandbuch" 
     subtitle="Installation, Bedienung und Wartung des Exponats"
     icon="book-open" >}}
   {{< card 
-    link="sad/" 
+    link="technische-dokumentation/" 
     title="Technische Dokumentation" 
     subtitle="Architektur, Entwicklung und Systemaufbau"
     icon="code" >}}
   {{< card 
-    link="testing/" 
+    link="testkonzept/" 
     title="Testkonzept" 
     subtitle="Teststrategien, Testfälle und Qualitätssicherung"
     icon="beaker" >}}
