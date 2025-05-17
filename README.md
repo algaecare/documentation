@@ -36,3 +36,8 @@ hugo server --logLevel debug --disableFastRender -p 1313
 For detailed information on how to use Hugo, please refer to the official documentation:
 
 https://imfing.github.io/hextra/docs/
+
+## arc42 Vorlage
+
+Die vollständige arc42 Vorlage ist unter `arc42_template.md` zu finden.
+Die Vorlage ist in Markdown geschrieben und kann mit jedem Markdown-Editor bearbeitet werden.
