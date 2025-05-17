@@ -1,3 +1,9 @@
+---
+title: XX. arc42-Template
+type: docs
+weight: 100
+---
+
 ***Über arc42***
 
 arc42, das Template zur Dokumentation von Software- und Systemarchitekturen.
@@ -8,7 +14,7 @@ Created, maintained and (C) by Dr. Peter Hruschka, Dr. Gernot Starke and contrib
 Siehe https://arc42.org.
 
 
-# 1.0 Einführung und Ziele
+## 1. Einführung und Ziele
 
 Beschreibt die wesentlichen Anforderungen und treibenden Kräfte, die bei der Umsetzung der Softwarearchitektur und Entwicklung des Systems berücksichtigt werden müssen.
 
@@ -20,7 +26,7 @@ Dazu gehören:
 * Qualitätsziele für die Architektur und
 * relevante Stakeholder und deren Erwartungshaltung.
 
-## 1.1 Aufgabenstellung
+### 1.1 Aufgabenstellung
 
 **Inhalt**
 
@@ -40,7 +46,7 @@ Halten Sie diese Auszüge so knapp wie möglich und wägen Sie Lesbarkeit und Re
 
 Siehe [Anforderungen und Ziele](https://docs.arc42.org/section-1/) in der online-Dokumentation (auf Englisch!).
 
-## 1.2 Qualitätsziele
+### 1.2 Qualitätsziele
 
 **Inhalt**
 
@@ -60,7 +66,7 @@ Weil Qualitätsziele grundlegende Architekturentscheidungen oft maßgeblich beei
 
 Tabellarische Darstellung der Qualitätsziele mit möglichst konkreten Szenarien, geordnet nach Prioritäten.
 
-## 1.3 Stakeholder
+### 1.3 Stakeholder
 
 **Inhalt**
 
@@ -87,7 +93,7 @@ Tabelle mit Rollen- oder Personennamen, sowie deren Erwartungshaltung bezüglich
 | _&lt;Rolle-1>_ | _&lt;Kontakt-1>_ | _&lt;Erwartung-1>_ |
 | _&lt;Rolle-2>_ | _&lt;Kontakt-2>_ | _&lt;Erwartung-2>_  |
 
-# 2.0 Randbedingungen
+## 2. Randbedingungen
 
 **Inhalt**
 
@@ -106,7 +112,7 @@ Bei Bedarf unterscheiden Sie technische, organisatorische und politische Randbed
 
 Siehe [Randbedingungen](https://docs.arc42.org/section-2/) in der online-Dokumentation (auf Englisch!).
 
-# 3.0 Kontextabgrenzung
+## 3. Kontextabgrenzung
 
 **Inhalt**
 
@@ -129,7 +135,7 @@ Verschiedene Optionen:
 
 Siehe [Kontextabgrenzung](https://docs.arc42.org/section-3/) in der online-Dokumentation (auf Englisch!).
 
-## 3.1 Fachlicher Kontext
+### 3.1 Fachlicher Kontext
 
 **Inhalt**
 
@@ -151,7 +157,7 @@ Der Titel gibt den Namen Ihres Systems wieder; die drei Spalten sind: Kommunikat
 
 ***&lt;optional: Erläuterung der externen fachlichen Schnittstellen>***
 
-## 3.2 Technischer Kontext
+### 3.2 Technischer Kontext
 
 **Inhalt**
 
@@ -174,7 +180,7 @@ Beispielsweise UML Deployment-Diagramme mit den Kanälen zu Nachbarsystemen, beg
 
 ***&lt;Mapping fachliche auf technische Schnittstellen>***
 
-# 4.0 Lösungsstrategie
+## 4. Lösungsstrategie
 
 **Inhalt**
 
@@ -199,7 +205,7 @@ Vermeiden Sie redundante Beschreibungen und verweisen Sie eher auf weitere Ausf�
 
 Siehe [Lösungsstrategie](https://docs.arc42.org/section-4/) in der online-Dokumentation (auf Englisch!).
 
-# 5.0 Bausteinsicht
+## 5. Bausteinsicht
 
 **Inhalt**
 
@@ -229,7 +235,7 @@ Sie enthält somit die Whitebox-Beschreibungen ausgewählter Bausteine der Ebene
 
 Siehe [Bausteinsicht](https://docs.arc42.org/section-5/) in der online-Dokumentation (auf Englisch!).
 
-## 5.1 Whitebox Gesamtsystem
+### 5.1 Whitebox Gesamtsystem
 
 An dieser Stelle beschreiben Sie die Zerlegung des Gesamtsystems anhand des nachfolgenden Whitebox-Templates.
 Dieses enthält:
@@ -268,7 +274,7 @@ Falls Sie die tabellarische Beschreibung wählen, so werden Blackboxen darin nur
 Falls Sie die ausführliche Liste von Blackbox-Beschreibungen wählen, beschreiben Sie jede wichtige Blackbox in einem eigenen Blackbox-Template.
 Dessen Überschrift ist jeweils der Namen dieser Blackbox.
 
-### 5.1.1 <Name Blackbox 1>
+#### 5.1.1 <Name Blackbox 1>
 
 Beschreiben Sie die &lt;Blackbox 1> anhand des folgenden Blackbox-Templates:
 
@@ -292,21 +298,21 @@ _&lt;(Optional) Erfüllte Anforderungen>_
 
 _&lt;(optional) Offene Punkte/Probleme/Risiken>_
 
-### 5.1.2 <Name Blackbox 2>
+#### 5.1.2 <Name Blackbox 2>
 
 _&lt;Blackbox-Template>_
 
-### 5.1.n <Name Blackbox n>
+#### 5.1.n <Name Blackbox n>
 
 _&lt;Blackbox-Template>_
 
-### 5.1.4 <Name Schnittstelle 1>
+#### 5.1.4 <Name Schnittstelle 1>
 
 ...
 
-### 5.1.m <Name Schnittstelle m>
+#### 5.1.m <Name Schnittstelle m>
 
-## 5.2 Ebene 2
+### 5.2 Ebene 2
 
 Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 1 als Whitebox.
 
@@ -315,43 +321,43 @@ Bitte stellen Sie dabei Relevanz vor Vollständigkeit.
 Skizzieren Sie wichtige, überraschende, riskante, komplexe oder besonders volatile Bausteine.
 Normale, einfache oder standardisierte Teile sollten Sie weglassen.
 
-### 5.2.1 Whitebox _<Baustein 1>_
+#### 5.2.1 Whitebox _<Baustein 1>_
 
 ...zeigt das Innenleben von _Baustein 1_.
 
 _&lt;Whitebox-Template>_
 
-### 5.2.2 Whitebox _<Baustein 2>_
+#### 5.2.2 Whitebox _<Baustein 2>_
 
 _&lt;Whitebox-Template>_
 
 ...
 
-### 5.2.m Whitebox _<Baustein m>_
+#### 5.2.m Whitebox _<Baustein m>_
 
 _&lt;Whitebox-Template>_
 
-## 5.3 Ebene 3
+### 5.3 Ebene 3
 
 Beschreiben Sie den inneren Aufbau (einiger) Bausteine aus Ebene 2 als Whitebox.
 
 Bei tieferen Gliederungen der Architektur kopieren Sie diesen Teil von arc42 für die weiteren Ebenen.
 
-### 5.3.1 Whitebox <_Baustein x.1_>
+#### 5.3.1 Whitebox <_Baustein x.1_>
 
 ...zeigt das Innenleben von _Baustein x.1_.
 
 _&lt;Whitebox-Template>_
 
-### 5.3.2 Whitebox <_Baustein x.2_>
+#### 5.3.2 Whitebox <_Baustein x.2_>
 
 _&lt;Whitebox-Template>_
 
-### 5.3.3 Whitebox <_Baustein y.1_>
+#### 5.3.3 Whitebox <_Baustein y.1_>
 
 _&lt;Whitebox-Template>_
 
-# 6.0 Laufzeitsicht
+## 6. Laufzeitsicht
 
 **Inhalt**
 
@@ -388,19 +394,19 @@ Nutzen Sie beispielsweise:
 
 Siehe [Laufzeitsicht](https://docs.arc42.org/section-6/) in der online-Dokumentation (auf Englisch!).
 
-## 6.1 _<Bezeichnung Laufzeitszenario 1>_
+### 6.1 _<Bezeichnung Laufzeitszenario 1>_
 
 * &lt;hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 * &lt;hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem Szenario erläutern>
 
-## 6.2 _<Bezeichnung Laufzeitszenario 2>_
+### 6.2 _<Bezeichnung Laufzeitszenario 2>_
 
 ...
 
-## 6.3 _<Bezeichnung Laufzeitszenario n>_
+### 6.3 _<Bezeichnung Laufzeitszenario n>_
 
 ...
-# 7.0 Verteilungssicht
+## 7. Verteilungssicht
 
 **Inhalt**
 
@@ -433,7 +439,7 @@ Nutzen Sie diese, evtl. auch geschachtelt, wenn Ihre Verteilungsstruktur es verl
 
 Siehe [Verteilungssicht](https://docs.arc42.org/section-7/) in der online-Dokumentation (auf Englisch!).
 
-## 7.1 Infrastruktur Ebene 1
+### 7.1 Infrastruktur Ebene 1
 
 An dieser Stelle beschreiben Sie (als Kombination von Diagrammen mit Tabellen oder Texten):
 
@@ -453,27 +459,27 @@ _&lt;Erläuternder Text>_
 * **Zuordnung von Bausteinen zu Infrastruktur**\
 _&lt;Beschreibung der Zuordnung>_
 
-## 7.2 Infrastruktur Ebene 2
+### 7.2 Infrastruktur Ebene 2
 
 An dieser Stelle können Sie den inneren Aufbau (einiger) Infrastrukturelemente aus Ebene 1 beschreiben.
 
 Für jedes Infrastrukturelement kopieren Sie die Struktur aus Ebene 1.
 
-### 7.2.1 _<Infrastrukturelement 1>_
+#### 7.2.1 _<Infrastrukturelement 1>_
 
 _&lt;Diagramm + Erläuterungen>_
 
-### 7.2.2 _<Infrastrukturelement 2>_
+#### 7.2.2 _<Infrastrukturelement 2>_
 
 _&lt;Diagramm + Erläuterungen>_
 
 ...
 
-### 7.2.3 _<Infrastrukturelement n>_
+#### 7.2.3 _<Infrastrukturelement n>_
 
 _&lt;Diagramm + Erläuterungen>_
 
-# 8.0 Querschnittliche Konzepte
+## 8. Querschnittliche Konzepte
 
 **Inhalt**
 
@@ -519,21 +525,21 @@ Eine mögliche (nicht aber notwendige!) Untergliederung dieses Abschnittes könn
 
 Siehe [Querschnittliche Konzepte](https://docs.arc42.org/section-8/) in der online-Dokumentation (auf Englisch).
 
-## 8.1 _<Konzept 1>_
+### 8.1 _<Konzept 1>_
 
 _&lt;Erklärung>_
 
-## 8.2 _<Konzept 2>_
+### 8.2 _<Konzept 2>_
 
 _&lt;Erklärung>_
 
 ...
 
-## 8.3 _<Konzept n>_
+### 8.3 _<Konzept n>_
 
 _&lt;Erklärung>_
 
-# 9.0 Architekturentscheidungen
+## 9. Architekturentscheidungen
 
 **Inhalt**
 
@@ -559,7 +565,7 @@ Verschiedene Möglichkeiten:
 Siehe [Architekturentscheidungen](https://docs.arc42.org/section-9/) in der arc42 Dokumentation (auf Englisch!).
 Dort finden Sie Links und Beispiele zum Thema ADR.
 
-# 10.0 Qualitätsanforderungen
+## 10. Qualitätsanforderungen
 
 **Inhalt**
 
@@ -574,7 +580,7 @@ Weil Qualitätsanforderungen die Architekturentscheidungen oft maßgeblich beein
 
 Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in der online-Dokumentation (auf Englisch!).
 
-## 10.1 Qualitätsbaum
+### 10.1 Qualitätsbaum
 
 **Inhalt**
 
@@ -591,7 +597,7 @@ Die mit Prioritäten versehene Baumstruktur gibt Überblick über die -- oftmals
 
 In jedem Fall sollten Sie hier Verweise auf die Qualitätsszenarien des folgenden Abschnittes aufnehmen.
 
-## 10.2 Qualitätsszenarien
+### 10.2 Qualitätsszenarien
 
 **Inhalt**
 
@@ -617,7 +623,7 @@ Insbesondere wenn Sie die Qualität Ihrer Architektur mit Methoden wie ATAM übe
 
 Entweder tabellarisch oder als Freitext.
 
-# 11.0 Risiken und technische Schulden
+## 11. Risiken und technische Schulden
 
 **Inhalt**
 
@@ -636,7 +642,7 @@ Liste oder Tabelle von Risiken und/oder technischen Schulden, eventuell mit vorg
 
 Siehe [Risiken und technische Schulden](https://docs.arc42.org/section-11/) in der online-Dokumentation (auf Englisch!).
 
-# 12.0 Glossar
+## 12. Glossar
 
 **Inhalt**
 
