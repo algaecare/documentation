@@ -42,9 +42,10 @@ Mehr Details zum Prototyp und zur Herstellung auf [Confluence](https://fhnw-proj
 | 02.04.2025  | Usability-Test       | TC 4.2            | TM , UX        | durchgeführt  |
 
 ## Endprodukt
-Beschreibung Prototyp und Bild. Link zu Confluence.
+Das "Endprodukt" ist die finale Version unseres Exponats, mit dem wir einen weiteren Usability-Test durchführen können. Die Feedbacks nutzen wir, um die letzten Schliffe und Dekorationen zu realisieren.
+Mehr Details und Bilder zur Herstellung auf [Confluence](https://fhnw-projecttrack.atlassian.net/wiki/x/Z4DNLw).
 
 ### Zeitplan von Endprodukt
-| Datum       | Testart              | Test              | Verantwortlich | Status |
-|-------------|----------------------|-------------------|----------------|--------|
-| tbd         | Usability-Test       | TC 4.3            | TM , UX        |        |
+| Datum       | Testart              | Test              | Verantwortlich | Status        |
+|-------------|----------------------|-------------------|----------------|---------------|
+| 14.05.2025  | Usability-Test       | TC 4.3            | TM , UX        | durchgeführt  |
