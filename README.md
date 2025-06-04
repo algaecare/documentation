@@ -2,7 +2,7 @@
 
 This Repository contains the documentation for the Algae Care project.
 
-https://docu-541dc1.pages.fhnw.ch/
+
 
 Technologies used:
 - Hugo
